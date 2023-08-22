@@ -1,0 +1,16 @@
+dag_config:
+  event_name: 'nsp_adp'
+  jira_ticket: 'DATAENG-1032'
+  description: 'Deliver NSP ADP data through data stream service into BQ Datawarehouse'
+  event_table_name: 'nsp_adp_product_stage'
+  gcp_conn: 'bq_data_warehouse_connection'
+  bq_project_id: 'bq_data_warehouse_project'
+  bq_lake_project_id: 'bq_data_lake_project'
+  bq_lake_dataset_id: 'events'
+  ref_column: 'event_id'
+  bq_partition_column: 'partition_date'
+  is_test: False
+events:
+  - nsp_adp_product_stage_created
+  - nsp_adp_product_stage_deleted
+  - nsp_adp_product_stage_updated

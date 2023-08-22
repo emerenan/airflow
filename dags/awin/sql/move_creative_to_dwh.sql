@@ -1,0 +1,32 @@
+INSERT INTO `{project_dwh}.{dataset_dwh}.{table_name_dwh}`
+SELECT
+   CAST(advertiser_id as  INT64) as advertiser_id,
+    advertiser_name,
+    CAST(publisher_id as  INT64) as publisher_id,
+    publisher_name,
+    region,
+    currency,
+    CAST(impressions as  INT64) as impressions,
+    CAST(clicks as  INT64) as clicks,
+    CAST(creative_id as  INT64) as creative_id,
+    creative_name,
+    tag_name,
+    CAST(pending_no as  INT64) as pending_no,
+    CAST(pending_value as  FLOAT64) as pending_value,
+    CAST(pending_comm as  FLOAT64) as pending_comm,
+    CAST(confirmed_no as  INT64) as confirmed_no,
+    CAST(confirmed_value as  FLOAT64) as confirmed_value,
+    CAST(confirmed_comm as  FLOAT64) as confirmed_comm,
+    CAST(bonus_no as  INT64) as bonus_no,
+    CAST(bonus_value as  FLOAT64) as bonus_value,
+    CAST(bonus_comm as  FLOAT64) as bonus_comm,
+    CAST(total_no as  INT64) as total_no,
+    CAST(total_value as  FLOAT64) as total_value,
+    CAST(total_comm as  FLOAT64) as total_comm,
+    CAST(declined_no as  INT64) as declined_no,
+    CAST(declined_value as  FLOAT64) as declined_value,
+    CAST(declined_comm as  FLOAT64) as declined_comm,
+    tags,
+    CAST(report_date as  DATE) as report_date
+FROM `{project_dl}.{dataset_dl}.{table_name_dl}`
+WHERE report_date = '{start_date}';

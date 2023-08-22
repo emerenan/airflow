@@ -1,0 +1,29 @@
+etl:
+  jira: 'DATAENG-1117'
+  description: 'It is a recreation of avr-analysts.Cwalker.SalesforceUserHistory.'
+  sql: 'salesforce_user_history.sql'
+  bq_project_id: 'bq_data_warehouse_project'
+  bq_dataset_id: 'viator_salesforce'
+  table_name: 'salesforce_user_history'
+  materialisation: 'table'
+  create_table_if_not_exist: True
+  is_test: False
+  partition_field: ''
+  table_schema: 
+    Id: STRING
+    Username: STRING
+    Email: STRING
+    Firstname: STRING
+    Lastname: STRING
+    Name: STRING
+    RoleName: STRING
+    StartDate: DATE
+    EndDate: STRING
+  view:
+    bq_project_id: 'bq_data_warehouse_project'
+    bq_dataset_id: 'viator_salesforce'
+    table_name: 'vw_salesforce_user_history'
+    description: 'It is a recreation of avr-analysts.Cwalker.vwSalesforceUserHistory.'
+    create_table_if_not_exist: True
+    materialisation: 'view'
+      

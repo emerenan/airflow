@@ -1,0 +1,73 @@
+etl:
+  jira: 'DATAENG-1159'
+  description: 'It is a recreation of avr-analysts.Cwalker.VSSChannelMatrix.'
+  sql: 'VSSChannelMatrix.sql'
+  bq_project_id: 'bq_data_warehouse_project'
+  bq_dataset_id: 'viator_warehouse'
+  table_name: 'vss_channel_matrix'
+  materialisation: 'partition_table'
+  create_table_if_not_exist: True
+  is_test: False
+  partition_field: 'partition_date'
+  table_schema: 
+    partition_date: DATE
+    CaseID: STRING
+    Quarter: STRING
+    Year: INT64
+    Site: STRING
+    Reason1: STRING
+    Reason2: STRING
+    Reason3: STRING
+    Tasktype: STRING
+    CaseRecordType: STRING
+    AccountManager: STRING
+    SupplierCode: STRING
+    SupplierName: STRING
+    SupplierCountry: STRING
+    ConnectedReservationSystem: STRING
+    FirstContractAcceptanceDate: DATE
+    ContractAcceptanceDate: STRING
+    CaseCount: INT64
+    TurnAroundTimeHrs: INT64
+    DistributedTasks: INT64
+    ActiveTimeSeconds: INT64
+    FollowUpAuxSeconds: FLOAT64
+    ReadyStateSeconds: FLOAT64
+    PeopleCostPerProductiveSecond: FLOAT64
+    FullyLoadedCostPerProductiveSecond: FLOAT64
+    CostType: STRING
+    CESCount: INT64
+    CESDetractors: INT64
+    CESPromoters: INT64
+    FCRNumerator: INT64
+    FCRDenominator: INT64
+    ResolutionYes: INT64
+    ResolutionCount: INT64
+    AgentPerformance: INT64
+    EasinessOfAddingProductCount: INT64
+    EasinessOfAddingProductDetractors: INT64
+    EasinessOfAddingProductPromoters: INT64
+    SurveyCount: INT64
+    ProductCategory: STRING
+    Createddate: DATE
+    GBV: FLOAT64
+    OperatingIncome: FLOAT64
+    Bookings: INT64
+    CancelledBookings: INT64
+    CancelledGBV: FLOAT64
+    TotalBookingsPrevious12Months: INT64
+    GBVUSDPrevious12Months: FLOAT64
+    PastBookingsPC: INT64
+    PastGBVPC: FLOAT64
+dependencies:
+  query: 
+    description: 'viator-data-warehouse.viator_warehouse.vss_channel_matrix has dependency of that table.'
+    sql: 
+      - 'VSSChatWrapUpToFirstCaseClose.sql'
+  gsheet:
+    description: 'viator-data-warehouse.viator_warehouse.vss_channel_matrix has dependency of that gsheet.'
+    sheets:
+      sheet1:
+        name: 'VSSCallCenterCostTable'
+        url: 'https://docs.google.com/spreadsheets/d/1EXR2uHo_Qe1g5Byl5WwWg18n8PwiE6z7zyM2eJGRaGQ/edit#gid=0'
+        range: 'A1:E23'

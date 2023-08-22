@@ -1,0 +1,6 @@
+customer_behavior:
+  - event_type_users_behaviors_customevent
+  - event_type_users_behaviors_app_firstsession
+  - event_type_users_behaviors_app_sessionend
+  - event_type_users_behaviors_app_sessionstart
+  - event_type_users_behaviors_app_newsfeedimpression
