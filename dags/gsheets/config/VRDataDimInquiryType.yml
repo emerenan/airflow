@@ -1,0 +1,7 @@
+columns: ID,InquiryTypeCode,InquiryType
+description: Map Inquiry Type to Type code and ID
+destination: DimInquiryType
+owner: rex-wh-dev@tripadvisor.com
+PrimaryKeys: ID, InquiryTypeCode
+schema: ID:INTEGER,InquiryTypeCode:STRING,InquiryType:STRING
+url: https://docs.google.com/spreadsheets/d/1bgCoV_-9EUwl7oKNmmKZLQ3m4EbW0yZ_4GgcOrR0NtE/edit#gid=0

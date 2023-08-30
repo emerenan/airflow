@@ -1,0 +1,7 @@
+columns: RetailSiteURL,POSName,BrandChannel,WebsiteGrouping
+description: This table maps each retailsiteurls to their corresponding website grouping
+  and poses
+destination: MapRetailSiteURLtoPOS
+primaryKeys: RetailSiteURL
+owner: rex-wh-dev@tripadvisor.com
+url: https://docs.google.com/spreadsheets/d/1xDg5BJUUhCSppcX74M9ZwJ83OdZEhDkvak81HyfvIp0/edit#gid=539817581

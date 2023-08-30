@@ -1,0 +1,7 @@
+url: https://docs.google.com/spreadsheets/d/1spj7qCFw9iG4gvZAfUXXTyq2eefxeKetLt33hBYhDtY/edit#gid=0
+columns: AdgroupId
+schema: AdgroupId:INTEGER
+owner: rcook@tripadisor.com
+primaryKeys: AdgroupId
+destination: SEMDandETest
+description: SEM D and E Tests detail for Landing pages

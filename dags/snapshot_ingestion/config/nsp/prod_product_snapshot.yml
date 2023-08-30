@@ -1,0 +1,163 @@
+#Ingestion: prod_product tables from viator-data-lake-prd
+bqProject: viator-data-warehouse
+bqDataset: NSPDataSnapshot
+tables:
+  product:
+    bqTable: prod_product_product
+    query: select product_id, product_code, supplier_code, external_code, SAFE_CAST(created_at AS STRING) AS created_at, created_at AS created_at_UTC, SAFE_CAST(updated_at AS STRING) AS updated_at, updated_at AS updated_at_UTC, status, title_content_ref, brief_description_content_ref, time_zone, SAFE_CAST(first_publish_requested_at AS STRING) AS first_publish_requested_at, first_publish_requested_at AS first_publish_requested_at_UTC, first_publish_requested_by, created_by, updated_by, SAFE_CAST(first_published_at AS STRING) AS first_published_at, first_published_at AS first_published_at_UTC, locale, SAFE_CAST(test AS BOOL) AS test, SAFE_CAST(internal AS BOOL) AS internal FROM viator-data-lake-prod.data_landing_rds_product.product;
+    description: DATAENG-2200 - Load partitions   
+  product_status:
+    bqTable: prod_product_product_status
+    query: select product_status_id, name, description FROM viator-data-lake-prod.data_landing_rds_product.product_status ;
+    description: DATAENG-2200 - Load partitions  
+  cancellation_policy:
+    bqTable: prod_product_cancellation_policy
+    query: select cancellation_policy_id, product_id, cancellation_policy_type, SAFE_CAST(created_at AS STRING) AS created_at, created_at AS created_at_UTC, SAFE_CAST(updated_at AS STRING) AS updated_at, updated_at AS updated_at_UTC, created_by, updated_by, SAFE_CAST(supplier_can_cancel_on_bad_weather AS BOOL) AS supplier_can_cancel_on_bad_weather, SAFE_CAST(supplier_can_cancel_on_small_group AS BOOL) AS supplier_can_cancel_on_small_group FROM viator-data-lake-prod.data_landing_rds_product.cancellation_policy ;
+    description: DATAENG-2200 - Load partitions  
+  cancellation_policy_type:
+    bqTable: prod_product_cancellation_policy_type
+    query: select cancellation_policy_type_id, name, description FROM viator-data-lake-prod.data_landing_rds_product.cancellation_policy_type ;
+    description: DATAENG-2200 - Load partitions  
+  booking_confirmation_settings:
+    bqTable: prod_product_booking_confirmation_settings
+    query: select booking_confirmation_settings_id, product_id, booking_cutoff_type, SAFE_CAST(booking_cutoff_fixed_time AS STRING) AS booking_cutoff_fixed_time, booking_cutoff_in_hours, confirmation_type, SAFE_CAST(send_notification_for_each_booking AS BOOL) AS send_notification_for_each_booking, manual_confirmation_before_cutoff_in_hours, SAFE_CAST(created_at AS STRING) AS created_at, created_at AS created_at_UTC, SAFE_CAST(updated_at AS STRING) AS updated_at, updated_at AS updated_at_UTC, created_by, updated_by, SAFE_CAST(eligible_for_cutoff_optimization AS BOOL) AS eligible_for_cutoff_optimization FROM viator-data-lake-prod.data_landing_rds_product.booking_confirmation_settings ;
+    description: DATAENG-2200 - Load partitions  
+  voucher:
+    bqTable: prod_product_voucher
+    query: select voucher_id, product_id, ticket_type, tickets_per_booking, voucher_exchange_point, SAFE_CAST(barcode_from_integration AS BOOL) AS barcode_from_integration, barcode_type, SAFE_CAST(show_barcode_on_ticket AS BOOL) AS show_barcode_on_ticket, special_ticket_instructions, product_logo_media_ref FROM viator-data-lake-prod.data_landing_rds_product.voucher ;
+    description: DATAENG-2200 - Load partitions  
+  product_taxonomy_item:
+    bqTable: prod_product_product_taxonomy_item
+    query: select product_id, taxonomy_item_id, SAFE_CAST(created_at AS STRING) AS created_at, created_at AS created_at_UTC, created_by, SAFE_CAST(updated_at AS STRING) AS updated_at, updated_at AS updated_at_UTC, updated_by FROM viator-data-lake-prod.data_landing_rds_product.product_taxonomy_item ;
+    description: DATAENG-2200 - Load partitions  
+  taxonomy_item_snapshot:
+    bqTable: prod_product_taxonomy_item
+    query: select taxonomy_item_id, internal_name, parent_id, SAFE_CAST(created_at AS STRING) AS created_at, created_at AS created_at_UTC, SAFE_CAST(updated_at AS STRING) AS updated_at, updated_at AS updated_at_UTC, taxonomy_item_ref, SAFE_CAST(available_for_new_products AS BOOL) AS available_for_new_products, name_content_ref FROM viator-data-lake-prod.data_landing_rds_product.taxonomy_item ;
+    description: DATAENG-2200 - Load partitions  
+  polled_integration:
+    bqTable: prod_product_polled_integration
+    query: select product_id, SAFE_CAST(enabled AS BOOL) AS enabled, SAFE_CAST(created_at AS STRING) AS created_at, created_by, SAFE_CAST(updated_at AS STRING) AS updated_at, updated_by, SAFE_CAST(last_enabled_at AS STRING) AS last_enabled_at FROM viator-data-lake-prod.data_landing_rds_product.polled_integration ;
+    description: DATAENG-2200 - Load partitions  
+  itinerary:
+    bqTable: prod_product_itinerary
+    query: select itinerary_id, product_id, duration_in_minutes, SAFE_CAST(skip_the_line AS BOOL) AS skip_the_line, SAFE_CAST(created_at AS STRING) AS created_at, created_at AS created_at_UTC, SAFE_CAST(updated_at AS STRING) AS updated_at, updated_at AS updated_at_UTC, created_by, updated_by, vcs_itinerary_ref, flexible_duration_from, flexible_duration_to, flexible_duration_unit, max_travellers_in_shared_tour, legacy_long_desc_content_ref, SAFE_CAST(is_private_tour AS BOOL) AS is_private_tour, legacy_duration_text_content_ref, SAFE_CAST(is_customizable AS BOOL) AS is_customizable FROM viator-data-lake-prod.data_landing_rds_product.itinerary ;
+    description: DATAENG-2200 - Load partitions  
+  itinerary_item:
+    bqTable: prod_product_itinerary_item
+    query: select itinerary_item_id, itinerary_id, itinerary_item_ref, itinerary_item_order, description_content_ref, duration_in_minutes, SAFE_CAST(created_at AS STRING) AS created_at, created_at AS created_at_UTC, SAFE_CAST(updated_at AS STRING) AS updated_at, updated_at AS updated_at_UTC, created_by, updated_by, poi_additional_info_content_ref, poi_location_ref, SAFE_CAST(pass_by AS BOOL) AS pass_by, admission_inclusion_type, group_num, itinerary_item_type, itinerary_item_group_id FROM viator-data-lake-prod.data_landing_rds_product.itinerary_item ;
+    description: DATAENG-2200 - Load partitions  
+  traveller_required_info:
+    bqTable: prod_product_traveller_required_info
+    query: select traveller_required_info_id, SAFE_CAST(lead_traveller_name AS BOOL) AS lead_traveller_name, SAFE_CAST(phone_number AS BOOL) AS phone_number, SAFE_CAST(full_names AS BOOL) AS full_names, SAFE_CAST(date_of_birth AS BOOL) AS date_of_birth, SAFE_CAST(weight AS BOOL) AS weight, SAFE_CAST(height AS BOOL) AS height, SAFE_CAST(passport_details AS BOOL) AS passport_details, passport_type, SAFE_CAST(arrival_airline_details AS BOOL) AS arrival_airline_details, SAFE_CAST(departure_airline_details AS BOOL) AS departure_airline_details, SAFE_CAST(arrival_port_details AS BOOL) AS arrival_port_details, SAFE_CAST(departure_port_details AS BOOL) AS departure_port_details, SAFE_CAST(shore_excursion_details AS BOOL) AS shore_excursion_details, SAFE_CAST(arrival_train_details AS BOOL) AS arrival_train_details, SAFE_CAST(departure_train_details AS BOOL) AS departure_train_details, SAFE_CAST(created_at AS STRING) AS created_at, created_at AS created_at_UTC, SAFE_CAST(updated_at AS STRING) AS updated_at, updated_at AS updated_at_UTC, created_by, updated_by, product_id FROM viator-data-lake-prod.data_landing_rds_product.traveller_required_info ;
+    description: DATAENG-2200 - Load partitions  
+  pos_unique_content:
+    bqTable: prod_product_pos_unique_content
+    query:  select unique_content_id, product_id, pos_channel, meta_title_ref, brief_description_ref, long_description_ref, insider_tips_ref, SAFE_CAST(created_at AS STRING) AS created_at, created_at AS created_at_UTC, created_by, SAFE_CAST(updated_at AS STRING) AS updated_at, updated_at AS updated_at_UTC, updated_by FROM viator-data-lake-prod.data_landing_rds_product.pos_unique_content ;
+    description: DATAENG-2200 - Load partitions  
+  product_activation:
+    bqTable: prod_product_product_activation
+    query: select product_activation_id, product_id, SAFE_CAST(activation_timestamp AS STRING) AS activation_timestamp, activation_timestamp AS activation_timestamp_UTC, SAFE_CAST(deactivation_timestamp AS STRING) AS deactivation_timestamp, deactivation_timestamp AS deactivation_timestamp_UTC, deactivation_reason, deactivation_operator_principal_ref, SAFE_CAST(created_at AS STRING) AS created_at, created_at AS created_at_UTC, SAFE_CAST(updated_at AS STRING) AS updated_at, updated_at AS updated_at_UTC, created_by, updated_by, activation_operator_principal_ref, termination_operator_principal_ref, SAFE_CAST(termination_timestamp AS STRING) AS termination_timestamp, termination_timestamp AS termination_timestamp_UTC FROM viator-data-lake-prod.data_landing_rds_product.product_activation ;
+    description: DATAENG-2200 - Load partitions  
+  product_deactivation_reason:
+    bqTable: prod_product_product_deactivation_reason
+    query: select product_deactivation_reason_id, name, description FROM viator-data-lake-prod.data_landing_rds_product.product_deactivation_reason ;
+    description: DATAENG-2200 - Load partitions  
+  booking_cutoff_type:
+    bqTable: prod_product_booking_cutoff_type
+    query:  select booking_cutoff_type_id, name, description FROM viator-data-lake-prod.data_landing_rds_product.booking_cutoff_type ;
+    description: DATAENG-2200 - Load partitions  
+  product_minimal_margin_override:
+    bqTable: prod_product_product_minimal_margin_override
+    query: select product_id, age_band_id, minimal_margin, SAFE_CAST(created_at AS STRING) AS created_at, created_at AS created_at_UTC, SAFE_CAST(updated_at AS STRING) AS updated_at, updated_at AS updated_at_UTC, created_by, updated_by FROM viator-data-lake-prod.data_landing_rds_product.product_minimal_margin_override ;
+    description: DATAENG-2200 - Load partitions  
+  product_minimal_margin:
+    bqTable: prod_product_product_minimal_margin
+    query: select product_id, age_band_id, minimal_margin, SAFE_CAST(created_at AS STRING) AS created_at, created_at AS created_at_UTC, SAFE_CAST(updated_at AS STRING) AS updated_at, updated_at AS updated_at_UTC, targeted_minimal_margin_id, SAFE_CAST(is_override_margin AS BOOL) AS is_override_margin FROM viator-data-lake-prod.data_landing_rds_product.product_minimal_margin ;
+    description: DATAENG-2200 - Load partitions  
+    #TODO: Name is missing!
+  pricing_package:
+    bqTable: prod_product_pricing_package
+    query: select pricing_package_id, pricing_package_ref, product_id, pricing_package_type_id, SAFE_CAST(NULL AS STRING) AS name, SAFE_CAST(created_at AS STRING) AS created_at, created_at AS created_at_UTC, SAFE_CAST(updated_at AS STRING) AS updated_at, updated_at AS updated_at_UTC, created_by, updated_by FROM viator-data-lake-prod.data_landing_rds_product.pricing_package ;
+    description: DATAENG-2200 - Load partitions  
+  pricing_package_details_traveller:
+    bqTable: prod_product_pricing_package_details_traveller
+    query: select pricing_package_id, age_band_id, net_price, retail_price, SAFE_CAST(created_at AS STRING) AS created_at, created_at AS created_at_UTC, SAFE_CAST(updated_at AS STRING) AS updated_at, updated_at AS updated_at_UTC, created_by, updated_by, min_travellers, max_travellers FROM viator-data-lake-prod.data_landing_rds_product.pricing_package_details_traveller ;
+    description: DATAENG-2200 - Load partitions  
+  prod_product_migration_status:
+    bqTable: prod_product_migration_status
+    query: "select migration_status_id, product_id, migration_status, SAFE_CAST(created_at AS STRING) AS created_at, created_at AS created_at_UTC, SAFE_CAST(updated_at AS STRING) AS updated_at, updated_at AS updated_at_UTC, created_by, updated_by FROM `viator-data-lake-prod.data_landing_rds_product.migration_status`" 
+    description: DATAENG-2200 - Load partitions  
+  product_video_link:
+    bqTable: prod_product_product_video_link
+    query: select product_video_link_id, media_ref, product_id, SAFE_CAST(active AS BOOL) AS active, locale, video_title_content_ref, video_description_content_ref, internal_notes, SAFE_CAST(created_at AS STRING) AS created_at, created_at AS created_at_UTC, created_by, SAFE_CAST(updated_at AS STRING) AS updated_at, updated_at AS updated_at_UTC, updated_by, product_video_link_code, pos_channel_id FROM viator-data-lake-prod.data_landing_rds_product.product_video_link ;
+    description: DATAENG-2200 - Load partitions  
+  product_connectivity_details:
+    bqTable: prod_product_product_connectivity_details
+    query: select product_id, SAFE_CAST(api_enabled AS BOOL) AS api_enabled, SAFE_CAST(created_at AS STRING) AS created_at, created_at AS created_at_UTC, created_by, SAFE_CAST(updated_at AS STRING) AS updated_at, updated_at AS updated_at_UTC, updated_by FROM viator-data-lake-prod.data_landing_rds_product.product_connectivity_details ;
+    description: DATAENG-2200 - Load partitions  
+  pricing_record:
+    bqTable: prod_product_pricing_record
+    query: select pricing_record_id, product_option_id, product_season_id, pricing_package_id, SAFE_CAST(sun AS BOOL) AS sun, SAFE_CAST(mon AS BOOL) AS mon, SAFE_CAST(tue AS BOOL) AS tue, SAFE_CAST(wed AS BOOL) AS wed, SAFE_CAST(thu AS BOOL) AS thu, SAFE_CAST(fri AS BOOL) AS fri, SAFE_CAST(sat AS BOOL) AS sat, SAFE_CAST(created_at AS STRING) AS created_at, created_at AS created_at_UTC, created_by, SAFE_CAST(updated_at AS STRING) AS updated_at, updated_at AS updated_at_UTC, updated_by, pricing_record_ref, SAFE_CAST(auto_extended_time AS STRING) AS auto_extended_time, auto_extended_time AS auto_extended_time_UTC, auto_extend_from_ref FROM viator-data-lake-prod.data_landing_rds_product.pricing_record ;
+    description: DATAENG-2200 - Load partitions  
+  pricing_record_times:
+    bqTable: prod_product_pricing_record_times
+    query: select pricing_record_times_id, pricing_record_id, SAFE_CAST(starts_at AS STRING) AS starts_at, SAFE_CAST(ends_at AS STRING) AS ends_at, SAFE_CAST(created_at AS STRING) AS created_at, created_at AS created_at_UTC, created_by FROM viator-data-lake-prod.data_landing_rds_product.pricing_record_times ;
+    description: DATAENG-2200 - Load partitions  
+  product_season:
+    bqTable: prod_product_product_season
+    query: select product_season_id, product_season_ref, product_id, title, SAFE_CAST(start_date AS STRING) AS start_date, SAFE_CAST(end_date AS STRING) AS end_date, SAFE_CAST(created_at AS STRING) AS created_at, created_at AS created_at_UTC, SAFE_CAST(updated_at AS STRING) AS updated_at, updated_at AS updated_at_UTC, created_by, updated_by, SAFE_CAST(auto_extended_time AS STRING) AS auto_extended_time, auto_extended_time AS auto_extended_time_UTC, auto_extend_from_ref, SAFE_CAST(is_default_season AS BOOL) AS is_default_season FROM viator-data-lake-prod.data_landing_rds_product.product_season ;
+    description: DATAENG-2200 - Load partitions  
+  product_product_type:
+    bqTable: prod_product_product_product_type
+    query: select product_id, product_type_id FROM viator-data-lake-prod.data_landing_rds_product.product_product_type ;
+    description: DATAENG-2200 - Load partitions  
+  confirmation_type:
+    bqTable: prod_product_confirmation_type
+    query: select confirmation_type_id , name , description FROM viator-data-lake-prod.data_landing_rds_product.confirmation_type ;
+    description: DATAENG-2200 - Load partitions  
+  pricing_package_details_unit:
+    bqTable: prod_product_pricing_package_details_unit
+    query: select pricing_package_id, max_travellers_per_unit, net_price, retail_price, SAFE_CAST(created_at AS STRING) AS created_at, created_at AS created_at_utc, SAFE_CAST(updated_at AS STRING) AS updated_at, updated_at AS updated_at_utc, created_by, updated_by FROM viator-data-lake-prod.data_landing_rds_product.pricing_package_details_unit ;
+    description: DATAENG-2200 - Load partitions  
+  guide_language_option:
+    bqTable: prod_product_guide_language_option
+    query: select guide_language_option_id, product_id, language, SAFE_CAST(human AS BOOL) AS human, SAFE_CAST(audio AS BOOL) AS audio, SAFE_CAST(written AS BOOL) AS written FROM viator-data-lake-prod.data_landing_rds_product.guide_language_option ;
+    description: DATAENG-2200 - Load partitions  
+  product_pricing_details:
+    bqTable: prod_product_product_pricing_details
+    query: select product_id, SAFE_CAST(children_require_adult AS BOOL) AS children_require_adult, max_count_per_booking, SAFE_CAST(rates_updated_at AS STRING) AS rates_updated_at, rates_updated_at AS rates_updated_at_utc, price_unit_id, pricing_type_id, SAFE_CAST(created_at AS STRING) AS created_at, created_at AS created_at_utc, SAFE_CAST(updated_at AS STRING) AS updated_at, updated_at AS updated_at_utc, start_time_type_id, price_unit_type_id, currency_code, dynamic_pricing_control_id, SAFE_CAST(auto_extension AS BOOL) AS auto_extension, dynamic_pricing_control_reason, SAFE_CAST(dynamic_pricing_control_updated_at AS STRING) AS dynamic_pricing_control_updated_at, dynamic_pricing_control_updated_at AS dynamic_pricing_control_updated_at_utc, dynamic_pricing_control_updated_by, created_by, updated_by FROM viator-data-lake-prod.data_landing_rds_product.product_pricing_details ;
+    description: DATAENG-2200 - Load partitions  
+  product_season_open_times:
+    bqTable: prod_product_product_season_open_times
+    query: select product_season_open_times_id, product_season_id, SAFE_CAST(sun AS BOOL) AS sun, SAFE_CAST(mon AS BOOL) AS mon, SAFE_CAST(tue AS BOOL) AS tue, SAFE_CAST(wed AS BOOL) AS wed, SAFE_CAST(thu AS BOOL) AS thu, SAFE_CAST(fri AS BOOL) AS fri, SAFE_CAST(sat AS BOOL) AS sat, SAFE_CAST(opens_at AS STRING) AS opens_at, SAFE_CAST(closes_at AS STRING) AS closes_at, SAFE_CAST(created_at AS STRING) AS created_at, created_at AS created_at_UTC, created_by FROM viator-data-lake-prod.data_landing_rds_product.product_season_open_times ;
+    description: DATAENG-2200 - Load partitions  
+  #TODO: MIssing auto_extension
+  product_option:
+    bqTable: prod_product_product_option
+    query: select product_option_id, option_ref, product_id, title,SAFE_CAST(NULL AS BOOL ) as auto_extension, SAFE_CAST(is_pickup_included AS BOOL) AS is_pickup_included, SAFE_CAST(created_at AS STRING) AS created_at, created_at AS created_at_UTC, SAFE_CAST(updated_at AS STRING) AS updated_at, updated_at AS updated_at_UTC FROM viator-data-lake-prod.data_landing_rds_product.product_option ;
+    description: DATAENG-2200 - Load partitions  
+  cancellation_policy_custom_rule:
+    bqTable: prod_product_cancellation_policy_custom_rule
+    query: SELECT cancellation_policy_custom_rule_id , cancellation_policy_id , days_from , days_to , fee_percentage FROM viator-data-lake-prod.data_landing_rds_product.cancellation_policy_custom_rule ;
+    description: DATAENG-2200 - Load partitions  
+  product_option_connectivity_details:
+    bqTable: prod_product_product_option_connectivity_details
+    query: select product_option_id, SAFE_CAST(api_enabled AS BOOL) AS api_enabled, mapping_mode, SAFE_CAST(sync_pricing_enabled AS BOOL) AS sync_pricing_enabled, sync_pricing_status, SAFE_CAST(created_at AS STRING) AS created_at, SAFE_CAST(updated_at AS STRING) AS updated_at FROM viator-data-lake-prod.data_landing_rds_product.product_option_connectivity_details ;
+    description: DATAENG-2200 - Load partitions  
+  product_gallery_link:
+    bqTable: prod_product_product_gallery_link
+    query: select product_gallery_link_id, product_id, gallery_ref_type, gallery_ref, SAFE_CAST(created_at AS STRING) AS created_at, SAFE_CAST(updated_at AS STRING) AS updated_at FROM viator-data-lake-prod.data_landing_rds_product.product_gallery_link ;
+    description: DATAENG-2200 - Load partitions  
+  location_outlier:
+    bqTable: prod_product_location_outlier
+    query: select product_id, location_ref, location_outlier_source_type_id FROM viator-data-lake-prod.data_landing_rds_product.location_outlier ;
+    description: DATAENG-2200 - Load partitions  
+  product_margin_program:
+    #effective_margin is only being calculated in the view.
+    bqTable: prod_product_product_margin_program
+    query: select product_id, base_margin, boost_margin, SAFE_CAST(created_at AS STRING) AS created_at, created_at AS created_at_utc, SAFE_CAST(updated_at AS STRING) AS updated_at, updated_at AS updated_at_utc, created_by, updated_by, SAFE_CAST(auto_opted_in AS BOOL) AS auto_opted_in FROM viator-data-lake-prod.data_landing_rds_product.product_margin_program ;
+    description: DATAENG-2200 - Load partitions  
+  product_cutoff_capacity:
+   bqTable: prod_product_product_cutoff_capacity
+   query: SELECT tgds_supplier_id , supplier_code , product_code , tour_grade_code , availability_status , capacity , SAFE_CAST(consumed_by_senior AS BOOLEAN) AS consumed_by_senior, SAFE_CAST(consumed_by_adult AS BOOLEAN) AS consumed_by_adult, SAFE_CAST(consumed_by_youth AS BOOLEAN) AS consumed_by_youth, SAFE_CAST(consumed_by_child AS BOOLEAN) AS consumed_by_child, SAFE_CAST(consumed_by_infant AS BOOLEAN) AS  consumed_by_infant, SAFE_CAST(start_time AS STRING) AS start_time ,  SAFE_CAST(availability_date AS STRING) AS availability_date, SAFE_CAST(booking_cutoff AS STRING) AS booking_cutoff , booking_cutoff AS  booking_cutoff_UTC , SAFE_CAST(updated_at AS STRING) AS updated_at , updated_at AS updated_at_UTC , SAFE_CAST(created_at AS STRING) AS created_at , created_at AS created_at_UTC FROM viator-data-lake-prod.data_landing_rds_product.product_cutoff_capacity WHERE updated_at >TIMESTAMP_SUB(CURRENT_TIMESTAMP(), INTERVAL 2 DAY);
+   description: DATAENG-2200 - Load partitions

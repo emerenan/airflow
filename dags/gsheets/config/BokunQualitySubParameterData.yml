@@ -1,0 +1,6 @@
+columns: DateCompleted,QualityID,QualityFormDefinition,Coach,CustomerImpactScore,BusinessImpactScore,AgentName,AgentTeam,CoachName,ParameterId,ParameterWeight,ParameterScore,SubParameterId,SubParameterText,SubParameterOriginalWeight,SubParameterWeight,SubParameterScore,Answer,SubParameterAnswerCount,SubParameterAnswerNo,DPACompliance
+description: Tracking internal quality audits at sub parameter level for Bokun.
+destination: BokunQualitySubParameterData
+owner: CSAnalytics@tripadvisor.com
+schema: DateCompleted:DATE,QualityID:INT64,QualityFormDefinition:STRING,Coach:STRING,CustomerImpactScore:INT64,BusinessImpactScore:INT64,AgentName:STRING,AgentTeam:STRING,CoachName:STRING,ParameterId:STRING,ParameterWeight:INT64,ParameterScore:INT64,SubParameterId:STRING,SubParameterText:STRING,SubParameterOriginalWeight:INT64,SubParameterWeight:INT64,SubParameterScore:INT64,Answer:STRING,SubParameterAnswerCount:INT64,SubParameterAnswerNo:INT64,DPACompliance:STRING
+url: https://docs.google.com/spreadsheets/d/1NrrTU4VrDegQ2xk5igeypwR_CTq5ZqmeS1HuGfUyhAs/edit#gid=0

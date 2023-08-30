@@ -1,0 +1,4 @@
+columns: PUID,SiteName,SiteRollup
+destination: SiteRollup
+owner: kforrestall@tripadvisor.com
+url: https://docs.google.com/spreadsheets/d/1KruA8Qwkn6YJ7HsH220TYvzK8_jFV2UviBn1WgUHu_0/edit?usp=sharing

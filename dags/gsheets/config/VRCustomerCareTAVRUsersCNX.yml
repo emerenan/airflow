@@ -1,0 +1,7 @@
+columns: UserId,Name,Team,SalesforceID,Brand,DateCreated,Excel,TicketAssignee,Site,FirstInContactLogin,ProductionDate,DateAdded,BokunSalesforceID
+description: The TAVRUsers table is created to track user's site changes. The google
+  sheet is being edited by TAVR CNX Team
+destination: TAVRUsersCNX
+owner: atatlidil@tripadvisor.com, rex-wh-dev@tripadvisor.com
+skipHeader: 'true'
+url: https://docs.google.com/spreadsheets/d/1GZ-lV1UghFANTuFSkEMIjcwN_mVAvZB9ElT3Prsxys4/edit?usp=drive_web&ouid=114418667757834129991

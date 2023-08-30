@@ -1,0 +1,5 @@
+columns: SalesforceUserEmail,Five9UserEmail
+description: This is to map EXP salesforce usernames to Five9 usernames.
+owner: CSAnalytics@tripadvisor.com
+destination: SalesForceFive9Map
+url: https://docs.google.com/spreadsheets/d/1fzBpFAKoSJjUITyuXKIqT662kW8OxhMnGhu4BTjfzOM/edit#gid=0

@@ -1,0 +1,6 @@
+columns: Type,Geo,URL,SV
+description: This table contains a list of geo hub urls and google search volumne for each geo. Only contains geo in the US for now.
+destination: VI_GeoHubSearchVolume
+owner: hyu@tripadvisor.com
+schema: Type:STRING,Geo:STRING,URL:STRING,SV:INTEGER
+url: https://docs.google.com/spreadsheets/d/1UikMoCeJa7NwikLgrMyxl2F42Md4w_HKy4IbSspSGmQ/edit?usp=sharing

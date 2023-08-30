@@ -1,0 +1,7 @@
+columns: MCID,Channel,ChannelGrouping
+description: Attraction DimMarketing
+PrimaryKeys: MCID
+owner: rex-wh-dev@tripadvisor.com
+destination: DimMarketing
+schema: MCID:INTEGER,Channel:STRING,ChannelGrouping:STRING
+url: https://docs.google.com/spreadsheets/d/1UWyMHIshgoOAdyE9wPvkoTMBlIA14CZrKh5Ka0MR3oQ

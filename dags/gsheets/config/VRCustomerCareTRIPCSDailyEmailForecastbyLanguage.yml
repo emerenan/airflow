@@ -1,0 +1,6 @@
+columns: Date,ApacENGEmails,ApacJAPEmails,ApacCHIEmails,ApacKOREmails,ApacINDEmails,ApacTHAEmails,ApacVIEEmails,AmericasEmails,GreekEmails,PortugueseEmails,RussianEmails,TurkishEmails,EmeaENGEmails,EmeaFREEmails,EmeaGEREmails,EmeaITAEmails,EmeaSPAEmails,EmeaDUTEmails,EmeaPOLEmails,ApacEmails,TingoEmails,TotalDailyForecast,DailyAmericas,DailyEmea
+description: The TRIPCSDailyEmailForecastbyLanguage originated from SQL Server. The
+  google sheet is being edited by Business Analytics Team.
+owner: CSAnalytics@tripadvisor.com
+destination: TRIPCSDailyEmailForecastbyLanguage
+url: https://docs.google.com/spreadsheets/d/1rG8BhzzsMoSGaZ3ZJLZHTNXQSKs52YNSDL80XAAjsYs/edit?usp=sharing

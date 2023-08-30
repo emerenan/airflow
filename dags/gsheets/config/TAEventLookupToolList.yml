@@ -1,0 +1,9 @@
+columns: Event
+description: This table contains a list of event tracking that will be used to filter
+  the TA Event Lookup Tool actions
+destination: TAEventLookupToolList
+owner: emmartin@tripadvisor.com
+PrimaryKeys: Event
+schema: Event:STRING
+skipHeader: 'true'
+url: https://docs.google.com/spreadsheets/d/1_Ir2cmPxJwSSeN7n-IfzRp50vUxc5sqhXV7CALK18G0/edit?usp=sharing

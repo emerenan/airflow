@@ -1,0 +1,7 @@
+columns: ID,IsPaid,ChannelGroup,ChannelSubGroup
+description: Map VR Business ChannelGroup and SubGroup to ID
+destination: DimBusinessChannel
+owner: rex-wh-dev@tripadvisor.com
+PrimaryKeys: ID
+schema: ID:INTEGER,IsPaid:STRING,ChannelGroup:STRING,ChannelSubGroup:STRING
+url: https://docs.google.com/spreadsheets/d/1H7fkLpCbtgaNA-WPCfe213-3Nsqc0lmb9QNeGP0kAX8/edit#gid=0

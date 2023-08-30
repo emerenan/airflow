@@ -1,0 +1,6 @@
+columns: CountryName,Locale
+description: This is a dimension table that maps Countries to their primary locale
+destination: DimCountryLocaleMapping
+owner: walves@tripadvisor.com
+schema: CountryName:STRING,Locale:STRING
+url: https://docs.google.com/spreadsheets/d/1TJQBXJSMxKBFlxlFto9doyTp7p0LwXIii6OP3SkZEm4/edit?usp=sharing

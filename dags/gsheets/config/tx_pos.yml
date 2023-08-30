@@ -1,0 +1,7 @@
+columns: pos_id,geo_id,locale,Country,Hostname
+description: Mapping table from TripMix to be joined to referrals data in taq_behaviour
+destination: tx_pos
+owner: apuranik@tripadvisor.com
+PrimaryKeys: pos_id
+schema: pos_id:INTEGER,geo_id:STRING,locale:STRING,Country:STRING,Hostname:STRING
+url: https://docs.google.com/spreadsheets/d/16D5ocouYf9H9PHIJKNMzxF_23ChFDinS0fCl-yY-BiE/edit?usp=sharing

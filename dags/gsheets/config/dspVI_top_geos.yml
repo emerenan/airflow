@@ -1,0 +1,6 @@
+columns: geoId
+description: Hardcoded top geo ids
+destination: prod_vi_top_geos
+owner: mmorim@tripadvisor.com
+PrimaryKeys: geoId
+url: https://docs.google.com/spreadsheets/d/1ElwdRUfqQaLg-vU6lUKZxZj4y6dI7xCaE8h2l5r7BhM/edit?usp=sharing

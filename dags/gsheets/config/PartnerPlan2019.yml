@@ -1,0 +1,9 @@
+columns: POS, SiteRollup, Language, Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct,
+  Nov, Dec
+description: PartnerPlan for 2019
+destination: PartnerPlan2019
+owner: rex-wh-dev@tripadvisor.com
+schema: POS:STRING, SiteRollup:STRING, Language:STRING, Jan:INTEGER, Feb:INTEGER,
+  Mar:INTEGER, Apr:INTEGER, May:INTEGER, Jun:INTEGER, Jul:INTEGER, Aug:INTEGER, Sep:INTEGER,
+  Oct:INTEGER, Nov:INTEGER, Dec:INTEGER
+url: https://docs.google.com/spreadsheets/d/1jH8u2ObH2DnZSiqDG1YGMd2XP0W-ccy01R2h86AiVys/edit#gid=0

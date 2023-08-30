@@ -1,0 +1,7 @@
+columns: ID,OrgCode,OrgName
+description: list attraction org's ID, code and name
+PrimaryKeys: ID
+owner: rex-wh-dev@tripadvisor.com
+destination: ATTRDimensions_DimOrganization
+schema: ID:INTEGER,OrgCode:STRING,OrgName:STRING
+url: https://docs.google.com/spreadsheets/d/1fP1P0t07MWX2RSZ6tEVVtCUDQdmBuhYNkqOXX1zhUFg/edit#gid=0

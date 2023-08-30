@@ -1,0 +1,8 @@
+columns: GroupName,Brand,CSFlag
+description: This is a mapping table to identify CS groups within TACS Salesforce
+  data
+destination: TRIPCSGroupMap
+owner: CSAnalytics@tripadvisor.com
+PrimaryKeys: GroupName
+skipHeader: 'true'
+url: https://docs.google.com/spreadsheets/d/1FKvlxWdViLiiVBdQQEOW4DyVbYgEejuChoVeiZK4TnY/edit?usp=sharing

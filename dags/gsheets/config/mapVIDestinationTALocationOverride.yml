@@ -1,0 +1,9 @@
+columns: TALocationId,DestinationId
+description: MapVIDestinationTALocationOverride is used in the script that creates
+  the new SharedDimensions.DimGeography table to fix a couple of incorrect mappings
+  and add new (manual) mappings that don't exist in the source tables. The table can
+  be used for either purpose.
+owner: rex-wh-dev@tripadvisor.com
+PrimaryKeys: TALocationID
+destination: MapVIDestinationTALocationOverride
+url: https://docs.google.com/spreadsheets/d/1iHhXtO4YvvMX0OEj3YmtwEERCcK_tPk1xBeOo_C2V7Q/edit?usp=sharing

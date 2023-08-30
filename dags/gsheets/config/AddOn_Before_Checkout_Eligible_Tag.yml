@@ -1,0 +1,7 @@
+columns: TagId,TagName,Transfer
+description: This table contains a list of tags that considered eligible to Add-on before checkout
+jira: ANDS-759
+destination: AddOn_Before_Checkout_Eligible_Tag
+owner: ytang@tripadvisor.com
+schema: TagId:INTEGER,TagName:STRING,Transfer:INTEGER
+url: https://docs.google.com/spreadsheets/d/1BSkunlMDZ7Xg1C9CCQEDbN_jYLERJV0qFNihwLSwtKs/edit?usp=sharing

@@ -1,0 +1,7 @@
+columns: UserID,Name,Team,ZenDeskID,Site,DateCreated,ZDUpdaterID,FirstInContactLogin,ProductionDate,SalesforceIDOld,SalesforceID,DateAdded,SinglePlatformSFID
+description: The table is created to track user's site changes. The google sheet is
+  being edited by CNX Team.
+destination: TRIPUsersCNX
+owner: atatlidil@tripadvisor.com, rex-wh-dev@tripadvisor.com
+skipHeader: 'true'
+url: https://docs.google.com/spreadsheets/d/1eLTtN2Tre2TF3cik_rS8LevmHcPvEbDqZTEdmiQ_V0Y/edit

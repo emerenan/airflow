@@ -1,0 +1,6 @@
+columns: ExistingLevelOne,ExistingLevelTwo,ExistingLevelThree,NewLevelOne,NewLevelTwo,NewLevelThree
+description: Used for mapping old and new demand drivers ( October 2020 )
+destination: EXPSFDemandDriversMapping2020
+owner: CSAnalytics@tripadvisor.com
+schema: ExistingLevelOne:STRING,ExistingLevelTwo:STRING,ExistingLevelThree:STRING,NewLevelOne:STRING,NewLevelTwo:STRING,NewLevelThree:STRING
+url: https://docs.google.com/spreadsheets/d/1iJ53PQ-RChuvzcTBxYIujHa-6S2L7WKI8bmGRxEcwX8/edit#gid=0

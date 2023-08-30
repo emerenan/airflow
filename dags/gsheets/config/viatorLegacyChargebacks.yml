@@ -1,0 +1,6 @@
+columns: itineraryID, disputeId,transactionAmountUSD, disputeAmountUSD, reasonCode, reasonDescription, fraudFlag, merchantID, MID, accountID, receivedDate, cardType, disputed, cbReclassification, processor, transactionDateTime,statusUpdateDate,status
+owner: aspencer@tripadvisor.com
+destination: viatorLegacyChargebacks
+description: table providing legacy viator chargebacks received prior to launch of ACM
+url: https://docs.google.com/spreadsheets/d/1-uVR7Ho9u2a5JJjFm3r0DuzVRnuB5_kudmQrjmmHRRU/edit?usp=sharing
+skipHeader: 'true'

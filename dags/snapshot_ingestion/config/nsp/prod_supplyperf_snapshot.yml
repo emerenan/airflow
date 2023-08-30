@@ -1,0 +1,23 @@
+bqProject: viator-data-warehouse
+bqDataset: NSPDataSnapshot
+tables:
+  prod_supplyperf_product_cancellation_rate_source_data:
+    bqTable: prod_supplyperf_product_cancellation_rate_source_data
+    query: SELECT product_code , total_booking_count , total_supplier_cancel_booking_count ,SAFE_CAST(supplier_cancelled_bookings AS STRING) AS supplier_cancelled_bookings, report_length_days, SAFE_CAST(supplier_cancellation_rate AS STRING) AS supplier_cancellation_rate ,SAFE_CAST(updated_at AS STRING) AS updated_at, updated_at AS updated_at_UTC FROM viator-data-lake-prod.data_landing_rds_supplyperf.product_cancellation_rate_source_data ;
+    description: DATAENG-2200 - Load partitions
+  nsp_product_quality_level_data:
+    bqTable: prod_product_nsp_product_quality_level_data
+    query:  SELECT product_code , overall_quality_level , availability_level , type_level , booking_engine_level , booking_cutoff_level , structured_times_level , starting_location_level , photos_quantity_level , themes_level , itinerary_level , guide_language_level , supplier_listing_level , cancellation_policy_level , inclusion_level , additional_info_level , product_unique_section_length_level , product_unique_section_field_level , cancellation_rate_level , review_count_level , avg_rating_level , rejection_rate_level , SAFE_CAST(updated_at AS STRING) AS updated_at FROM viator-data-lake-prod.data_landing_rds_supplyperf.nsp_product_quality_level_data ;
+    description: DATAENG-2200 - Load partitions
+  nsp_product_quality_source_data:
+    bqTable: prod_product_nsp_product_quality_source_data
+    query: SELECT product_code , product_type , SAFE_CAST(is_culinary_class AS BOOLEAN) AS is_culinary_class , SAFE_CAST(is_multi_day_tour  AS BOOLEAN) AS is_multi_day_tour , days_available_next365 , ticket_type , SAFE_CAST (is_sapi_product AS BOOLEAN) AS is_sapi_product, confirmation_type , SAFE_CAST(hours_in_advance AS STRING) AS hours_in_advance, hours_in_advance_reference_point , times_type , poi_count , SAFE_CAST(has_structured_pickup AS BOOLEAN) AS has_structured_pickup, SAFE_CAST(has_start_location AS BOOLEAN) AS  has_start_location, total_review_count , SAFE_CAST(total_avg_bubble_rating AS STRING) AS total_avg_bubble_rating, supplier_uploaded_photo_counts , professional_photo_counts , themes_count , SAFE_CAST(has_guide_language AS BOOLEAN) AS has_guide_language, SAFE_CAST(product_avg_margin AS STRING) AS product_avg_margin , cancellation_policy , inclusion_count , product_unique_section_length , SAFE_CAST(is_group_size_eligible AS BOOLEAN) AS is_group_size_eligible, max_travelers_in_shared_tour , gross_bookings_last90_travel_days , SAFE_CAST (supplier_driven_cancellation_rate_last90_travel_days AS STRING) AS supplier_driven_cancellation_rate_last90_travel_days,SAFE_CAST(updated_at AS STRING) AS updated_at, SAFE_CAST(has_wheel_chair_accessibility AS BOOLEAN) AS has_wheel_chair_accessibility , SAFE_CAST(has_physical_level_specified AS BOOLEAN) AS has_physical_level_specified, supplier_listing_score FROM viator-data-lake-prod.data_landing_rds_supplyperf.nsp_product_quality_source_data ;
+    description: DATAENG-2200 - Load partitions 
+  product_rejection_rate_source_data:
+    bqTable: prod_product_product_rejection_rate_source_data
+    query: SELECT product_code , total_booking_count , total_supplier_reject_booking_count ,SAFE_CAST(supplier_rejected_bookings AS STRING) AS supplier_rejected_bookings , report_length_days , SAFE_CAST(supplier_rejection_rate AS STRING) AS supplier_rejection_rate,SAFE_CAST(updated_at AS STRING) AS updated_at FROM viator-data-lake-prod.data_landing_rds_supplyperf.product_rejection_rate_source_data ;
+    description: DATAENG-2200 - Load partitions
+  prod_supplyperf_nsp_adp_product_stage:
+    bqTable: prod_supplyperf_nsp_adp_product_stage
+    query: SELECT product_stage_id, product_code, stage_id, criteria_rule_id, SAFE_CAST(criteria_data AS STRING) AS criteria_data, SAFE_CAST(created_at AS STRING) AS created_at, NULL AS created_at_UTC, SAFE_CAST(updated_at AS STRING) AS updated_at, NULL AS updated_at_UTC  FROM viator-data-lake-prod.data_landing_rds_supplyperf.nsp_adp_product_stage ;
+    description: DATAENG-2200 - Load partitions

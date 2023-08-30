@@ -1,0 +1,6 @@
+columns: PartnerID,PartnerName,PartnerWebsite,PartnerType,PartnerPlatform,PartnerPlatformAccount,DateJoined,IsRecruited,ManagedAccounts,PartnerCountry,AccountManager,EmailAddress,PartnerPlatformAccountManagedon,ManagedGroup,ManagedSubGroup,GroupType
+description: List of AWIN and SAS partners details
+owner: atatlidil@tripadvisor.com, mchattertonwhite@tripadvisor.com
+destination: NetworkAffiliatePartnerList
+schema: PartnerID:INTEGER,PartnerName:STRING,PartnerWebsite:STRING,PartnerType:STRING,PartnerPlatform:STRING,PartnerPlatformAccount:STRING,DateJoined:STRING,IsRecruited:STRING,ManagedAccounts:STRING,PartnerCountry:STRING,AccountManager:STRING,EmailAddress:STRING,PartnerPlatformAccountManagedon:STRING, ManagedGroup:STRING, ManagedSubGroup:STRING, GroupType:STRING
+url: https://docs.google.com/spreadsheets/d/1vD26mb80EQ4iTbkYY-rvOEbaNZoqSBA2Dly8nwS2GiA/edit#gid=0

@@ -1,0 +1,7 @@
+columns: TestID,FeatureName,VariantName,StartDate,EndDate,RolloutPercentControl,RolloutPercentVariant,TestRunner,IsActive,SpecOrJiraLink,Description
+description: This table contains a list of test info for VI's FDS and drives the tests shown in the FDS Test Tool.
+destination: FDSTestInfoVI
+PrimaryKeys: TestID
+owner: emmartin@tripadvisor.com, tdanzey@tripadvisor.com,lkraus@tripadvisor.com
+schema: TestID:INTEGER,FeatureName:STRING,VariantName:STRING,StartDate:DATE,EndDate:DATE,RolloutPercentControl:FLOAT,RolloutPercentVariant:FLOAT,TestRunner:STRING,IsActive:INTEGER,SpecOrJiraLink:STRING,Description:STRING
+url: https://docs.google.com/spreadsheets/d/1QuIsNlX03-Foe5G0HRCznLDA0KrTH82cm0TuzdK98i8/edit?usp=sharing

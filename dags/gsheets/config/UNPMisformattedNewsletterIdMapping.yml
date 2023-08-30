@@ -1,0 +1,8 @@
+columns: OldNewsletterId,NewNewsletterId
+description: Table maps wrongly formatted newsletterids to the correct format. The
+  misformat happened between April 2019 and July 2nd 2019
+owner: rex-wh-dev@tripadvisor.com, atatlidil@tripadvisor.com
+PrimaryKeys: OldNewsletterId
+destination: UNPMisformattedNewsletterIdMapping
+schema: OldNewsletterId:STRING,NewNewsletterId:STRING
+url: https://docs.google.com/spreadsheets/d/1tU8MdH2Q6i78ZsvAz-Gvu3lZ5c5FAvvXG2tWpTZ3Y6Y/edit#gid=0

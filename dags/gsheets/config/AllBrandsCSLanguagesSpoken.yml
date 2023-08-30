@@ -1,0 +1,6 @@
+columns: Brand,Site,Name,Lang1,Lang2,Lang3,Lang4
+description: To keep track of languages spoken by CS agents.
+destination: AllBrandsCSLanguagesSpoken
+owner: CSAnalytics@tripadvisor.com
+schema: Brand:STRING,Site:STRING,Name:STRING,Lang1:STRING,Lang2:STRING,Lang3:STRING,Lang4:STRING
+url: https://docs.google.com/spreadsheets/d/1WHCsjwVHESA7Uk8CMZ5H9aUEXZtosJaOlFDhqd_AXt4/edit#gid=0

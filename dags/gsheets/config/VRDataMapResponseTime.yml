@@ -1,0 +1,7 @@
+columns: ID,ResponseTimeDayID,ResponseTimeDay,ResponseTimeGroupingID,ResponseTimeGrouping,ResponseTimeSubGrouping,IsActive,DateAdded
+description: List ID and Grouping information corresponding to response time
+destination: MapResponseTime
+owner: rex-wh-dev@tripadvisor.com
+PrimaryKeys: ID
+schema: ID:INTEGER,ResponseTimeDayID:INTEGER,ResponseTimeDay:STRING,ResponseTimeGroupingID:INTEGER,ResponseTimeGrouping:STRING,ResponseTimeSubGrouping:STRING,IsActive:BOOLEAN,DateAdded:STRING
+url: https://docs.google.com/spreadsheets/d/1jKpUIVrr4Lqt4EO-syZMii-5FGPhx_WQYeZ5RcSLmXU/edit#gid=0

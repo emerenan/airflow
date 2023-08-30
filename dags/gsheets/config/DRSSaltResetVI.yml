@@ -1,0 +1,6 @@
+columns: DRSName, SaltResetDate, SaltResetBy
+description: This table contains information on when the salt is reset on Viator DRS
+destination: DRSSaltResetVI
+owner: lkraus@tripadvisor.com
+schema: DRSName:STRING, SaltResetDate:DATE, SaltResetBy:STRING
+url: https://docs.google.com/spreadsheets/d/1_LLPHiNRtEpPi3Q1gLjE9v3bvyZNMG-Cf-q26S6RDWw/edit?usp=sharing

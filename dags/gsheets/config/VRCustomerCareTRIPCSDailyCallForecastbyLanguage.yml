@@ -1,0 +1,6 @@
+columns: Date,ApacENGCalls,ApacJAPCalls,AmericasCalls,Tingo,InstantBookingCalls,EmeaENGCalls,EmeaFRECalls,EmeaGERCalls,EmeaITACall,EmeaSPACall,ApacCalls,AmericasSalesSupportCalls,EmeaSalesSupportCalls,TotalDailyForecast,DailyAmericas,DailyEmea
+description: The TRIPCSDailyCallForecastbyLanguage originated from SQL Server. The
+  google sheet is being edited by Business Analytics Team.
+destination: TRIPCSDailyCallForecastbyLanguage
+owner: CSAnalytics@tripadvisor.com
+url: https://docs.google.com/spreadsheets/d/1A6DNe6SRbfOD4HxsPDXhL66mebCLML64HLep4hXLs9o/edit?usp=sharing

@@ -1,0 +1,7 @@
+columns: AccountManager
+description: This table contains the list of active VR account managers, used for
+  filtering Tableau and other purposes.
+destination: VRAccountManagersActive
+owner: wlovotti@tripadvisor.com
+PrimaryKeys: AccountManager
+url: https://docs.google.com/spreadsheets/d/1ULa-CIb9TR0T56x92mhYAuRf2uNNSuenQ-a9cc-j9Ok/edit?usp=sharing

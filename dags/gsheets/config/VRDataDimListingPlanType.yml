@@ -1,0 +1,7 @@
+columns: ID,PlanType,BillingModel,IsFTL,RBOPM
+description: Map Listing Plan Type to ID
+destination: DimListingPlanType
+schema: ID:INTEGER,PlanType:STRING,BillingModel:STRING,IsFTL:BOOLEAN,RBOPM:STRING
+owner: rex-wh-dev@tripadvisor.com
+PrimaryKeys: ID
+url: https://docs.google.com/spreadsheets/d/1tw17JVJ5uwvl1sNVFunX8WTMEGSFdsCHvqu9odfbkCY/edit#gid=0

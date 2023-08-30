@@ -1,0 +1,8 @@
+columns: UserId,Name,Team,SalesforceID,Brand,DateCreated,Excel,TicketAssignee,Site,FirstInContactLogin,ProductionDate,DateAdded,BokunSalesforceID
+description: The table is created to track user's site changes. The google sheet is
+  being edited by TAVR IGT Team
+destination: TAVRUsersIGT
+owner: atatlidil@tripadvisor.com, rex-wh-dev@tripadvisor.com
+PrimaryKeys: UserId
+skipHeader: 'true'
+url: https://docs.google.com/spreadsheets/d/19LK9RJnsPPgYBUqKMHuKsBwZfNhcgZpHgcQBkJ6605g/edit?usp=drive_web&ouid=114418667757834129991

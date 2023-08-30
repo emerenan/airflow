@@ -1,0 +1,7 @@
+columns: Brand,EmailID,Issue
+description: A listing of emails which should be generally excluded from reporting
+  as they were the result of a Salesforce bug.
+owner: CSAnalytics@tripadvisor.com
+destination: SalesforceEmailIssues
+schema: Brand:STRING,EmailID:STRING,Issue:STRING
+url: https://docs.google.com/spreadsheets/d/1q6HM1Rfy0AsZzjrFqXCkHUxus6WQxocFYB4EFAifdGM/edit?usp=sharing

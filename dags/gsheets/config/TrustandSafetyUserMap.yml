@@ -1,0 +1,7 @@
+columns: accExpUsername,fullname,site,team,isActive,isAnalyst,isSeniorAnalyst,isTeamLeader,isManager,tableauUsername,hldbUsername,accVrUsername,sfExpId,sfVrId,inContactUser
+owner: aspencer@tripadvisor.com
+PrimaryKeys: accExpUsername
+destination: TrustAndSafetyUserMap
+description: table providing metadata for Trust and Safety analyst usernames
+url: https://docs.google.com/spreadsheets/d/12TpWn--q9AUO4pbxvcOeYAEIbaXL-RRLmI2kArPD6_g/edit?usp=sharing
+skipHeader: 'true'

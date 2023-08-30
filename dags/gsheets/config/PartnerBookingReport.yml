@@ -1,0 +1,8 @@
+columns: Partner,PUID,SubPUID,Email,Priority
+description: This table contains the list of partners receiving booking reports, and
+  is used a filter for SSRS. It is maintained by the BD team.
+PrimaryKeys: PUID
+owner: rex-wh-dev@tripadvisor.com, meldredge@tripadvisor.com
+destination: PartnerBookingReport
+schema: Partner:STRING,PUID:STRING,SubPUID:STRING,Email:STRING,Priority:INTEGER
+url: https://docs.google.com/spreadsheets/d/1JYwoQSAz3Y_YGTjpPW6cwaj12Rtn5VIWS64JIEU3M3Y/edit?usp=sharing

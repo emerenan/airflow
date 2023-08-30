@@ -1,0 +1,6 @@
+columns: Name,TeamName,Email,InContactName,Site,StartDate,EndDate
+description: Used for mapping teams to agents using the Intercom platform (Bokun customer  services)
+destination: IntercomTeamMapping
+owner: CSAnalytics@tripadvisor.com, mbrinded@tripadvisor.com
+schema: Name:STRING,TeamName:STRING,Email:STRING,InContactName:STRING,Site:STRING,StartDate:DATE,EndDate:DATE
+url: https://docs.google.com/spreadsheets/d/12q78Mv-rJpvq9pWj1BZc8RqMt50-pMu-s5Pz6IHD6cc/edit?usp=sharing

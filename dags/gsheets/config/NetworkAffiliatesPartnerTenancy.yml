@@ -1,0 +1,5 @@
+columns: Month,PartnerID,PartnerPlatform,PartnerPlatformAccount,LocalCurrencyCode,SpendingLocalCurrency,ToBeInvoicedLocalCurrency,SentToFinance,InvoiceReceived
+description: Network Affiliates Partner Tendency data for AVRWH-3297
+destination: NetworkAffiliatesPartnerTenancy
+owner: mchattertonwhite@tripadvisor.com
+url: https://docs.google.com/spreadsheets/d/1nhSJz-O-_bo_gEtflRtWFMOQl1zBwyt42_HmpVjXW_g/edit?usp=sharing

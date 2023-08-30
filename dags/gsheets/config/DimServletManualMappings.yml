@@ -1,0 +1,8 @@
+columns: URL,ServletType
+description: Manual mapping of SEO-indexed VR URLs to the 'Holiday Ideas' servlet
+  type because DimServlet currently has outdated mappings
+PrimaryKeys: URL
+owner: apuranik@tripadvisor.com
+destination: DimServletManualMappings
+skipHeader: 'true'
+url: https://docs.google.com/spreadsheets/d/1ilPcj66xQa2EFuYDtrNwTNWh3vF_S3gf4PKmACDLb-g/edit?usp=sharing

@@ -1,0 +1,7 @@
+columns: ID,SlicePartner,SliceGrouping,SliceGrouping2,SliceGroupingID3,SliceGrouping3,SliceGrouping4
+description: List all Slices for VRData
+destination: VRDimensions_DimSlice
+schema: ID:INTEGER,SlicePartner:STRING,SliceGrouping:STRING,SliceGrouping2:STRING,SliceGroupingID3:STRING,SliceGrouping3:STRING,SliceGrouping4:STRING
+owner: rex-wh-dev@tripadvisor.com
+PrimaryKeys: ID
+url: https://docs.google.com/spreadsheets/d/1bmYddiN92OrkJeXYs6ibt2f2fIT_M2Jnv1C38YX-cXc/edit#gid=0

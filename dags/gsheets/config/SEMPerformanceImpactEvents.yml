@@ -1,0 +1,6 @@
+columns: event,startDate,endDate,impact,pos,regionOrLanguage,partner,kpiImpact,area,subArea
+description: This is a table stores the list of performance impacting events
+destination: t_sem_performance_impact_events
+schema: event:STRING,startDate:DATE,endDate:DATE,impact:STRING,pos:STRING,regionOrLanguage:STRING,partner:STRING,kpiImpact:STRING,area:STRING,subArea:STRING
+owner: vmurugan@tripadvisor.com
+url: https://docs.google.com/spreadsheets/d/1fU8EZJl1EXNFXm2r8n7rV2uVr14UL38qSZwayXuQ_jw/edit#gid=351846516

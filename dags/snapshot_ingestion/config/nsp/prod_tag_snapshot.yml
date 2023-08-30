@@ -1,0 +1,27 @@
+bqProject: viator-data-warehouse
+bqDataset: NSPDataSnapshot
+tables:
+  computed_tag_mapping:
+    bqTable: prod_tag_computed_tag_mapping
+    query: select computed_tag_mapping_id, tag_id, product_code, SAFE_CAST(created_at AS STRING) AS created_at, created_at AS created_at_utc, SAFE_CAST(updated_at AS STRING) AS updated_at, updated_at AS updated_at_utc, created_by, updated_by FROM viator-data-lake-prod.data_landing_rds_tag.computed_tag_mapping ;
+    description: DATAENG-2200 - Load partitions  
+  tag_mapping_source:
+    bqTable: prod_tag_tag_mapping_source
+    query: select tag_mapping_source_id, name, description FROM viator-data-lake-prod.data_landing_rds_tag.tag_mapping_source ;
+    description: DATAENG-2200 - Load partitions  
+  tag:
+    bqTable: prod_tag_tag
+    query: select tag_id, tag_ref, ta_tag_id, name, translation_key, category_id, SAFE_CAST(created_at AS STRING) AS created_at, created_at AS created_at_UTC, SAFE_CAST(updated_at AS STRING) AS updated_at, updated_at AS updated_at_UTC, created_by, updated_by, SAFE_CAST(is_enabled AS BOOL) AS is_enabled FROM viator-data-lake-prod.data_landing_rds_tag.tag ;
+    description: DATAENG-2200 - Load partitions  
+  tag_mapping:
+    bqTable: prod_tag_tag_mapping
+    query: select tag_mapping_id, tag_id, product_code, score, tag_mapping_source_id, SAFE_CAST(created_at AS STRING) AS created_at, created_at AS created_at_UTC, SAFE_CAST(updated_at AS STRING) AS updated_at, updated_at AS updated_at_UTC, created_by, updated_by FROM viator-data-lake-prod.data_landing_rds_tag.tag_mapping ;
+    description: DATAENG-2200 - Load partitions  
+  category:
+    bqTable: prod_tag_category
+    query: select category_id, category_ref, ta_category_id, name, translation_key, parent_category_id, SAFE_CAST(created_at AS STRING) AS created_at, SAFE_CAST(updated_at AS STRING) AS updated_at, created_by, updated_by, SAFE_CAST(is_enabled AS BOOL) AS is_enabled FROM viator-data-lake-prod.data_landing_rds_tag.category ;
+    description: DATAENG-2200 - Load partitions  
+  tag_hierarchy:
+    bqTable: prod_tag_tag_hierarchy
+    query: select tag_hierarchy_id, tag_id, parent_tag_id, SAFE_CAST(created_at AS STRING) AS created_at, created_by FROM viator-data-lake-prod.data_landing_rds_tag.tag_hierarchy ;
+    description: DATAENG-2200 - Load partitions

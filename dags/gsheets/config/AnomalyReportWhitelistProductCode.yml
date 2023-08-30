@@ -1,0 +1,7 @@
+columns: ProductCode,Reason,CreatedBy
+description: This table contains a list of ProductCodes to be whitelisted from the
+  anomaly report.
+owner: rex-wh-dev@tripadvisor.com
+PrimaryKeys: ProductCode
+destination: AnomalyReportWhitelistProductCode
+url: https://docs.google.com/spreadsheets/d/1DbOQM0j1lzmU7OUTVuJGMBhbgGnszdskLQyLiwgW_ro/edit?usp=sharing

@@ -1,0 +1,7 @@
+columns: ProductCode,ProductName
+description: This table identifies products to suppress in a sort suppression test
+destination: ProductstoSuppressinTest
+owner: aperezsegura@tripadvisor.com
+PrimaryKeys: ProductCode
+schema: ProductCode:STRING,ProductName:STRING
+url: https://docs.google.com/spreadsheets/d/1sAcl36M4rIzOrUc0tEGHF7ALY0gYcyajasDJQTpXObo/edit?usp=sharing

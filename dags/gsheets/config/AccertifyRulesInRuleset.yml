@@ -1,0 +1,7 @@
+columns: RuleSet,RuleSequence,Score,RuleID,RuleName,ContinueDescription,ContinueSequence
+owner: aspencer@tripadvisor.com
+PrimaryKeys: RuleID
+destination: vwViatorRulesInRuleset
+description: table detailing the user-friendly Accertify name mapped to each database ID
+url: https://docs.google.com/spreadsheets/d/1krGys2MYS66FhuM_aSYyNnyDkZM0HDuhZqC4ClyxTio/edit?usp=sharing
+skipHeader: 'true'

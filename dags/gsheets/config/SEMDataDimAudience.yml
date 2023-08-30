@@ -1,0 +1,6 @@
+columns: userListId,AudienceName,AudienceGroup,AudienceAge
+description: Define attributes (name, group, age) for each SEM audience ID
+destination: DimAudience
+owner: apuranik@tripadvisor.com
+schema: userListId:INTEGER,AudienceName:STRING,AudienceGroup:STRING,AudienceAge:STRING
+url: https://docs.google.com/spreadsheets/d/1bZ3Cz_1u8kDmyge1VxbEqyvLneMUuADd-Ibla-qPucs/edit?usp=sharing

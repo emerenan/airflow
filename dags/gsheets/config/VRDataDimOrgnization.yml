@@ -1,0 +1,7 @@
+columns: OrgID,OrgName,OrgCode,OrgMD5,ExtMapContext,SourceMD5
+description: Map Organization name to ID, code, MD5
+destination: VRDimensions_DimOrganization
+schema: OrgID:INTEGER,OrgName:STRING,OrgCode:STRING,OrgMD5:INTEGER,ExtMapContext:STRING,SourceMD5:INTEGER
+owner: rex-wh-dev@tripadvisor.com
+PrimaryKeys: OrgID
+url: https://docs.google.com/spreadsheets/d/1YXKo2b8nossZcEzMD2gHPrB6dQZAv5ko0d-D5gD_z1s/edit#gid=0

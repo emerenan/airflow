@@ -1,0 +1,8 @@
+columns: MCID,Description,ChannelGrouping
+description: This table contains a list of MCIDs specific to Product Reviews and their
+  descriptions as requested by the SQB and UGC teams.
+owner: emmartin@tripadvisor.com, rex-wh-dev@tripadvisor.com
+PrimaryKeys: MCID
+destination: ProductReviewMCIDMapping
+schema: MCID:INTEGER,Description:STRING,ChannelGrouping:STRING
+url: https://docs.google.com/spreadsheets/d/1_J1Eq6EKD7c7SAvT9ywuAQtHjSWlIZ8RwwPCNPi9Wss/edit?usp=sharing

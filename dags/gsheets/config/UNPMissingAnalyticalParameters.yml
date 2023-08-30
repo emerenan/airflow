@@ -1,0 +1,10 @@
+columns: BUSINESS_DOMAIN,TEMPLATE_ID,ANALYTICS_PILLAR,ANALYTICS_STREAM,ANALYTICS_MESSAGE,ANALYTICS_TYPE,ANALYTICS_MCID
+description: In case of UNP, the analytical parameters are pulled from the Payload
+  table. This table is meant to hold values for when the analytical parameters are
+  missing. This table should only by used for data pre 9/26/19, since there will be
+  consistencies in place post that date.
+destination: UNPMissingAnalyticalParameters
+owner: rex-wh-dev@tripadvisor.com, ddsouza@tripadvisor.com
+PrimaryKeys: BUSINESS_DOMAIN,TEMPLATE_ID
+schema: BUSINESS_DOMAIN:STRING,TEMPLATE_ID:STRING,ANALYTICS_PILLAR:STRING,ANALYTICS_STREAM:STRING,ANALYTICS_MESSAGE:STRING,ANALYTICS_TYPE:STRING,ANALYTICS_MCID:INTEGER
+url: https://docs.google.com/spreadsheets/d/1_31npjP0k8tk8groTmFxMVb5LT1l4dTN7nRm2HubpYc/edit?usp=sharing

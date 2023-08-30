@@ -1,0 +1,8 @@
+columns: ID,State,Region
+description: This table contains US. states and regions
+destination: US_RegionsAndStates
+jira: VRA-9408
+owner: mmorim@tripadvisor.com
+primarykeys: ID
+schema: ID:INTEGER,State:STRING,Region:STRING
+url: https://docs.google.com/spreadsheets/d/17vv4-MDpptMssZDhOtE0bQ03OlhMqoZ5OzvOc4X9Nds/edit?usp=sharing

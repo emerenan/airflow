@@ -1,0 +1,4 @@
+columns: Date,EnglishSales,French,German,Portuguese,Spanish,Italian,Japanese,Mandarin,EnglishCC,GroupsTeam,Total
+destination: ViatorCallsLocked
+owner: CSAnalytics@tripadvisor.com
+url: https://docs.google.com/spreadsheets/d/18dWICFPuRkfGQP0UxG--w_tMT3krCYxbX7ohWdrHcaE/edit?usp=sharing

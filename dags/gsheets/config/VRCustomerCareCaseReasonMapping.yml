@@ -1,0 +1,7 @@
+columns: Type,Reason1,Reason2,Reason3,RevisedType,RevisedReason1,RevisedReason2,RevisedReason3
+description: Some of the VR case reasons are being changed/renamed/deleted but the
+  team want to make sure that reporting can continue over time. This table will be
+  used for mapping old to new case reasons.
+destination: TAVRCaseReasonMapping
+owner: CSAnalytics@tripadvisor.com
+url: https://docs.google.com/spreadsheets/d/1ni4g2_vb9HDRevRM5MfvHo9E1lMpm4jx2EfYFZG4krE/edit#gid=0

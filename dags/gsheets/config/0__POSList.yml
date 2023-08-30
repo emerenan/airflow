@@ -1,0 +1,7 @@
+columns: POSName,POS
+description: This table contains the 56 POS
+destination: POSList
+schema: POSName:STRING,POS:STRING
+primaryKeys: POSName
+owner: mmorin@tripadvisor.com
+url: https://docs.google.com/spreadsheets/d/1vTH6oP091grf-okzKNmT-HTWfjPfD1tJotr2_7fU_iI/edit?usp=sharing

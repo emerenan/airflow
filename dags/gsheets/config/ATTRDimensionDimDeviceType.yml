@@ -1,0 +1,7 @@
+columns: DeviceClientType,DeviceSystem,DevicePlatform,DeviceType
+description: Dimension table for the device type which combines different values from
+  sessions and bookings
+destination: DimDeviceType
+owner: rex-wh-dev@tripadvisor.com
+skipHeader: 'true'
+url: https://docs.google.com/spreadsheets/d/12zWqIXqV1t2P21lOyN_VvMFIPFYutt_fpt2tEgJZF1Q/edit#gid=0

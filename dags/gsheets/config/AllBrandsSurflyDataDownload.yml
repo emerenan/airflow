@@ -1,0 +1,6 @@
+columns: Date, StartURL, SessionID, PinCode, AgentEmail, Participants, Duration, Brand
+description: To collect Surfly data in order to be able to report results back to business.
+destination: AllBrandsSurflyDataDownload
+schema: 'Date: STRING, StartURL: STRING, SessionID: STRING, PinCode: STRING, AgentEmail: STRING, Participants: STRING, Duration: STRING, Brand: STRING'
+owner: CSAnalytics@tripadvisor.com
+url: https://docs.google.com/spreadsheets/d/1NBwD10P__Fv2w7jRWomgU-xbcLn-v6dCeVv_50js3AU/edit#gid=0

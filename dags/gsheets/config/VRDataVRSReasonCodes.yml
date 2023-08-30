@@ -1,0 +1,8 @@
+columns: ReasonID,Action,Reason,IsSystemReason,HolidayMakerReason,PenalizeOwner
+description: List ID, actions and related informations corresponding to VRS cancellation
+  reasons
+destination: VRSReasonCodes
+owner: rex-wh-dev@tripadvisor.com
+PrimaryKeys: ReasonID
+schema: ReasonID:INTEGER,Action:STRING,Reason:STRING,IsSystemReason:BOOLEAN,HolidayMakerReason:BOOLEAN,PenalizeOwner:STRING
+url: https://docs.google.com/spreadsheets/d/11mOlKV-qQgMItflL40h-0zQHad4DVThIFaJ_nxc33uU/edit#gid=0

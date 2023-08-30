@@ -1,0 +1,6 @@
+columns: Keyword, Sentiment, KeywordCleanUp
+description: Keywords to allow for sentiment report of new CSAT one-word answer question.
+destination: AllBrandsKeywordSentiment
+schema: 'Keyword: STRING, Sentiment: STRING, KeywordCleanUp: STRING'
+owner: CSAnalytics@tripadvisor.com
+url: https://docs.google.com/spreadsheets/d/1Tc-VzuXxv3bxR7nFIFw_YiNkFnfkkz4ha787LQZu0hk/edit#gid=0

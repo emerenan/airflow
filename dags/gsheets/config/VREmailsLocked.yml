@@ -1,0 +1,5 @@
+columns: Date,FKEngEmails,HLEngEmails,HLSpaEmails,HLItaEmails,HLPorEmails,HLGerEmails,HLFreEmails,NISpaEmails,DailyEmails,
+  SocialMedia
+destination: TAVREmailsLocked
+owner: CSAnalytics@tripadvisor.com
+url: https://docs.google.com/spreadsheets/d/1TFRtBvodsGCYI52KjczzME71iK_b5HDbCm9Rhsi6He8/edit?usp=sharing

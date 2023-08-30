@@ -1,0 +1,6 @@
+columns: Id,AgentId,Coach,CustomerImpactScore,BusinessImpactScore,DateCompleted,AgentName,AgentSite,QualityFormDefinition,DPACompliance
+description: Tracking internal quality audits for Bokun.
+destination: BokunQualityData
+owner: CSAnalytics@tripadvisor.com
+schema: Id:INT64,AgentId:STRING,Coach:STRING,CustomerImpactScore:INT64,BusinessImpactScore:INT64,DateCompleted:DATE,AgentName:STRING,AgentSite:STRING,QualityFormDefinition:STRING,DPACompliance:STRING
+url: https://docs.google.com/spreadsheets/d/1yYDxEmR8NPXHEWqxvstZyixbRD2rFcaoNcoFUHyzRls/edit#gid=0

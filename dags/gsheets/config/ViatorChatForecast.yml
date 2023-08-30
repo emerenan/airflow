@@ -1,0 +1,4 @@
+columns: Date,EnglishCustomerCare,FrenchCustomerCare,GermanCustomerCare,PortugueseCustomerCare,SpanishCustomerCare,ItalianCustomerCare,JapaneseCustomerCare,ChatSales,Total
+destination: ViatorChatForecast
+owner: aturnbull@tripadvisor.com
+url: https://docs.google.com/spreadsheets/d/1Mmm6t49-Qgpi8cjENyupMb_HgSy6FtiY39bLn2ysSis/edit?usp=sharing

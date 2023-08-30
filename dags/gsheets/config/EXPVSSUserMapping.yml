@@ -1,0 +1,4 @@
+columns: AgentEmail, ProductionDate
+owner: CSAnalytics@tripadvisor.com
+destination: EXPVSSUserMapping
+url: https://docs.google.com/spreadsheets/d/1uSqM1gq_14eNw_EoAYu3rnfl_UhkjNswVSrZdOfAyUI/edit#gid=0

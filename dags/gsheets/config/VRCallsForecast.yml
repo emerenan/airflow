@@ -1,0 +1,4 @@
+columns: Date,FKEngCalls,HLEngCalls,HLSpaCalls,HLItaCalls,HLPorCalls,HLGerCalls,HLFreCalls,NISpaCalls,DailyCSForecast,BCBOCalls,BCBTCalls,DailyBCBOBCBTForecast,TelesalesChats,FKTelesalesCalls,HLTelesalesCalls,NITelesalesCalls,TATelesalesCalls,DailyTelesalesCalls
+destination: TAVRCallsForecast
+owner: CSAnalytics@tripadvisor.com
+url: https://docs.google.com/spreadsheets/d/16uGiyFuTAP7aVgdTiPtLBpxPbd-Gxv66nrWHDh50xTc/edit?usp=sharing

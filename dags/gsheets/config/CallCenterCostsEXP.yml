@@ -1,0 +1,6 @@
+columns: YearMonth,Year,Month,Site,PeopleCostsUSD,PeopleCostsForecastOrActuals,AllSiteTotalHeads,SiteHeads,LicencingAndTelcoAllSiteCosts,LicencingAndTelcoPerSiteUSD,LicencingAndTelcoCostsForecastOrActuals,FullyLoadedCostsUSD
+description: Observing Call Center costs and mapping to salesforce tasks and cases in order to establish cost per case and booking, and handle time.
+destination: CallCenterCostsEXP
+owner: CSAnalytics@tripadvisor.com
+schema: YearMonth:STRING,Year:STRING,Month:STRING,Site:STRING,PeopleCostsUSD:INT64,PeopleCostsForecastOrActuals:STRING,AllSiteTotalHeads:INT64,SiteHeads:INT64,LicencingAndTelcoAllSiteCosts:INT64,LicencingAndTelcoPerSiteUSD:INT64,LicencingAndTelcoCostsForecastOrActuals:STRING,FullyLoadedCostsUSD:INT64
+url: https://docs.google.com/spreadsheets/d/1tOApvUZY4Xs-wQIy1Gi-QNaWOBKi-V-bR6GLidysFeI/edit?usp=sharing

@@ -1,0 +1,6 @@
+columns: ProductCode,AdditiveFactor,MultiplicativeFactor
+description: Overrides for calculating sort scores
+destination: prod_vi_baseline_sort_override
+owner: mmorim@tripadvisor.com
+PrimaryKeys: ProductCode
+url: https://docs.google.com/spreadsheets/d/1jInQHtI1GQsx4Dtddzr5Ns1RkZ20yFLfe-eEjmxYNNM/edit?usp=sharing

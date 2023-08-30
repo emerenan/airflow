@@ -1,0 +1,7 @@
+columns: PUID,CompanyName,SalesforceAccountURL,PartnerType,LiveDate,URLExampleOfIntegration,Notes,Rating,comments
+description: AVRWH-4402
+PrimaryKeys: PUID
+owner: sdines@tripadvisor.com
+destination: RetailSitePartnerAccount
+schema: PUID:INTEGER,CompanyName:STRING,SalesforceAccountURL:STRING,PartnerType:STRING,LiveDate:DATE,URLExampleOfIntegration:STRING,Notes:STRING,Rating:STRING,comments:STRING
+url: https://docs.google.com/spreadsheets/d/1Z9K0lQhUN6q-hZkaFTp_GlhWLMZW17VTP7odPjNzUR8/edit#gid=0

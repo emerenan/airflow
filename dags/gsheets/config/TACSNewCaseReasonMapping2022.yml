@@ -1,0 +1,6 @@
+columns: OldReason1,OldReason2,OldReason3,NewReason1,NewReason2,NewReason3,DesiasComment
+description: New mapping - April 2022
+destination: TACSNewCaseReasonMapping2022
+owner: CSAnalytics@tripadvisor.com
+skipHeader: 'TRUE'
+url: https://docs.google.com/spreadsheets/d/1bXk49N-8h8SgG0vQkihZ8CJbfQBCws_ci2UKXvCAKwY/edit#gid=0

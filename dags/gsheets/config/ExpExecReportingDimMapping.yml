@@ -1,0 +1,6 @@
+columns: Dimension,DetailedName,PlanName,ReportingName
+description: This is mapping table for the Exec Reporting pipeline
+destination: ExpExecReportingDimMapping
+owner: walves@tripadvisor.com
+schema: Dimension:STRING,DetailedName:STRING,PlanName:STRING,ReportingName:STRING
+url: https://docs.google.com/spreadsheets/d/1OSlUPD57SJCx6mnhP9O8xNmVlf4Rt-KL0pObsFyM6l8/edit?usp=sharing

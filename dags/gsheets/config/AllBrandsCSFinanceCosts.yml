@@ -1,0 +1,6 @@
+columns: Year,Month,Brand,Site,Channel,FullLoadedCostUSD,PeopleCostUSD
+description: Finance Costs for CS sites by month
+destination: AllBrandsCSFinanceCosts
+skipHeader: 'true'
+owner: CSAnalytics@tripadvisor.com
+url: https://docs.google.com/spreadsheets/d/1Dwna7dhmIH6DnddGYnEqqJidThRQFHjU-_ipLys7yR8/edit#gid=1462638017

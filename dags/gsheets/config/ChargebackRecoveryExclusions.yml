@@ -1,0 +1,7 @@
+columns: DisputeId,Reason
+owner: aspencer@tripadvisor.com
+PrimaryKeys: DisputeId
+destination: ChargebackRecoveryExclusions
+description: table detailing chargeback disputes which have recovery discrepancies which can be explained
+url: https://docs.google.com/spreadsheets/d/1PeLbfZiWBfe9tiMhcKoWSbin1E4RjXgTfb5wTlQQmYI/edit?usp=sharing
+skipHeader: 'true'

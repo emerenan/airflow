@@ -1,0 +1,7 @@
+columns: CaseOriginsGeneralCSRecordType,CSCaseFlag,CaseOpenedInQueue,CaseAssignedAsPerAssignmentRule
+description: to identify true incoming CS cases in order to improve FER logics
+destination: VRListOfCaseOrigins
+owner: CSAnalytics@tripadvisor.com
+PrimaryKeys: CaseOriginsGeneralCSRecordType
+schema: CaseOriginsGeneralCSRecordType:STRING,CSCaseFlag:STRING,CaseOpenedInQueue:STRING,CaseAssignedAsPerAssignmentRule:STRING
+url: https://docs.google.com/spreadsheets/d/1WkIwJBWIiOVNrbpp9uRoMrhDUrtBzaoPt5AG6-VM0xU/edit#gid=0

@@ -1,0 +1,7 @@
+columns: date,FK_fc,HL_fc,NI_fc,TA_fc
+description: The TAVRTSDailyForecast originated from SQL Server. The google sheet
+  is being edited by Business Analytics Team.
+destination: TAVRTSDailyForecast
+skipHeader: 'true'
+owner: CSAnalytics@tripadvisor.com
+url: https://docs.google.com/spreadsheets/d/1ssPBtcs1EHHqITvrc17i915it7ZT1DVLQxOdiWkw_5w/edit?usp=sharing

@@ -1,0 +1,7 @@
+columns: ID,TimeBookingDay,TimeBookingGrouping,IsActive,DateAdded
+description: List Id and grouping corresponding to booking time
+owner: rex-wh-dev@tripadvisor.com
+PrimaryKeys: ID
+destination: MapBookingTime
+schema: ID:INTEGER,TimeBookingDay:STRING,TimeBookingGrouping:STRING,IsActive:BOOLEAN,DateAdded:STRING
+url: https://docs.google.com/spreadsheets/d/1Kqi-mbrU1SrOXatWPklUml4YZIHzwmpuRyV0JogCBh4/edit#gid=0

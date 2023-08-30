@@ -1,0 +1,4 @@
+columns: Date, Tier1Chats, OnshoreHelpline, Tier1Emails
+destination: BokunVolumeForecast
+owner: CSAnalytics@tripadvisor.com
+url: https://docs.google.com/spreadsheets/d/1DeMoZEjSPzJ57zHGTsFvp75DMeG7c5eoLJ0TqEzwEY4/edit#gid=0

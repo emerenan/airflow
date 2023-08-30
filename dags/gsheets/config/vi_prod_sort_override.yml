@@ -1,0 +1,8 @@
+columns: ProductCode, PositionValue, ChangeType, UpOrDown
+description: List of products to include in sort override and their targets
+destination: prod_vi_sort_override_products
+owner: mmorim@tripadvisor.com
+PrimaryKeys: ProductCode
+schema: ProductCode:STRING, PositionValue:INTEGER, ChangeType:STRING, UpOrDown:STRING
+skipHeader: 'true'
+url: https://docs.google.com/spreadsheets/d/1lVHkqmgpT1tm-bApTj-F4mW37TR6RFe8IyzYmUFlT-c/edit#gid=0

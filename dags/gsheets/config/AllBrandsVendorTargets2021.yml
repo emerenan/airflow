@@ -1,0 +1,7 @@
+columns: Brand,LOB,TargetType,MetricName,Vendor,Tenure,Target,StartDate,EndDate
+description: This is to allow the VMO team to take responsibility on updating the
+  targets for the Vendor Sites. This table will be used to create the Target dashboard.
+destination: AllBrandsVendorsTargets2021
+schema: Brand:STRING,LOB:STRING,TargetType:STRING,MetricName:STRING,Vendor:STRING,Tenure:STRING,Target:STRING,StartDate:DATE,EndDate:DATE
+owner: CSAnalytics@tripadvisor.com
+url: https://docs.google.com/spreadsheets/d/1cTss3wlC8KpMwsbrEmAz7p9cr0r9gENnIQUWXAp0TUo/edit#gid=0

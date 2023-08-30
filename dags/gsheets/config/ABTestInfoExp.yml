@@ -1,0 +1,8 @@
+columns: TestID,TestName,OrgCode,StartDate,EndDate,SliceSpace,ControlDRSID,TestDRSID,Device,EarliestTaAppVersion,LanguageCode,POS,IsActive,TrackingElements,QualifyingServlet,TrackingElementType
+description: This table contains a list of AB test info for Experiences and drives
+  the tests shown in the Exp AB Test Dashboard.
+destination: ABTestInfoExp
+owner: emmartin@tripadvisor.com, walves@tripadvisor.com,lkraus@tripadvisor.com
+PrimaryKeys: TestID
+schema: TestID:INTEGER,TestName:STRING,OrgCode:STRING,StartDate:DATE,EndDate:DATE,SliceSpace:STRING,ControlDRSID:INTEGER,TestDRSID:INTEGER,Device:STRING,EarliestTaAppVersion:STRING,LanguageCode:STRING,POS:STRING,IsActive:INTEGER,TrackingElements:STRING,QualifyingServlet:STRING,TrackingElementType:STRING
+url: https://docs.google.com/spreadsheets/d/1-ShEYAG1t4t2zRMI30CwF9Cq0rLPW3WaTL5zomrU7rk/edit?usp=sharing

@@ -1,0 +1,7 @@
+columns: AccountName,AccountId,TimeZoneCode
+description: This table contains a list of SEM accounts and their timezones and is
+  used for the Anomaly detection SEM table
+destination: SEMAccountTimeZoneMapping
+owner: rex-wh-dev@tripadvisor.com, exheblati@tripadvisor.com, fhussain@tripadvisor.com
+schema: AccountName:STRING,AccountId:INTEGER,TimeZoneCode:STRING
+url: https://docs.google.com/spreadsheets/d/14299ZnmMGczBrTvc_q38oPNnMjtdY3PV0H9Mbau99dY/edit?usp=sharing

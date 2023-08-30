@@ -1,0 +1,7 @@
+columns: ID,CrossSiteID,CrossSite,HasFacebookID,HasFacebook,HasBounceID,HasBounce,HasInterestID,HasInterest,HasInquiryID,HasInquiry,HasTIPID,HasTIP,HasBookingID,HasBooking
+description: Additional Slicers for VRData
+destination: DimAdditionalSlicers
+owner: rex-wh-dev@tripadvisor.com
+PrimaryKeys: ID
+schema: ID:INTEGER,CrossSiteID:INTEGER,CrossSite:STRING,HasFacebookID:INTEGER,HasFacebook:STRING,HasBounceID:INTEGER,HasBounce:STRING,HasInterestID:INTEGER,HasInterest:STRING,HasInquiryID:INTEGER,HasInquiry:STRING,HasTIPID:INTEGER,HasTIP:STRING,HasBookingID:INTEGER,HasBooking:STRING
+url: https://docs.google.com/spreadsheets/d/1LLoRRTm50zCt8IGhS8QO0UtbaeY7cWk44MXyVCaKEbU/edit#gid=0

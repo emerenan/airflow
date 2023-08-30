@@ -1,0 +1,7 @@
+columns: ID,PoolID,Pool,PosID,POS,Language,Website,WebsiteGrouping,Site,DateAdded,DateAdded_UTC
+description: List all travel info sites seen
+destination: DimTravelInfoSite
+owner: rex-wh-dev@tripadvisor.com
+PrimaryKeys: ID
+schema: ID:INTEGER,PoolID:INTEGER,Pool:STRING,PosID:INTEGER,POS:STRING,Language:STRING,Website:STRING,WebsiteGrouping:STRING,Site:STRING,DateAdded:STRING,DateAdded_UTC:TIMESTAMP
+url: https://docs.google.com/spreadsheets/d/1gDdiHaOtC6Akcu7fvOT93zbjvgQCAEttQHwCc1SblfY/edit#gid=0

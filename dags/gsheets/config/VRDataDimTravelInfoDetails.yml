@@ -1,0 +1,7 @@
+columns: ID,DaysToCheckInID,DaysToCheckInGroup,GuestID,GuestGroup,LengthOfStayID,LenthOfStayGroup
+description: List all possible combinition of Travel Information Details
+destination: DimTravelInfoDetails
+owner: rex-wh-dev@tripadvisor.com
+PrimaryKeys: ID
+schema: ID:INTEGER,DaysToCheckInID:INTEGER,DaysToCheckInGroup:STRING,GuestID:INTEGER,GuestGroup:STRING,LengthOfStayID:INTEGER,LenthOfStayGroup:STRING
+url: https://docs.google.com/spreadsheets/d/1DsFS07dCPomMsX2YnxwENTPGIsDnXQJNfKbiRZ1yk7U/edit#gid=0

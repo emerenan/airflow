@@ -1,0 +1,7 @@
+columns: TagId,TagLevel,TagName,Remove,Comment
+description: This table contains a list of tags and 'remove' column indicates whether the tag should be removed
+destination: VI_FilterExclusion
+PrimaryKeys: TagId
+owner: ytang@tripadvisor.com
+schema: TagId:INTEGER,TagLevel:STRING,TagName:STRING,Remove:INTEGER,Comment:STRING
+url: https://docs.google.com/spreadsheets/d/1KaBv8G-YaWjQ77Froj-P2pJRybzgVfqSSUOoy2KNJz0/edit?usp=sharing

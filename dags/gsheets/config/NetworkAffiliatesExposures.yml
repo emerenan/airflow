@@ -1,0 +1,6 @@
+columns: AccountName,PartnerID,PartnerName,CampaignWebsite,CampaignStartDate,CampaignEndDate,CPARate,CPAStartDate,CPASEndDate,ExposurePlacementName,OfferType,OfferMessage,OfferExclusive,CodeOrAID,IsExposureLive,ExposurePaymentType,ToplineMessage,SectionOfTheSite,Offer1,Offer2,Offer3
+description: This creates the source data for Exposure analysis
+destination: NetworkAffiliateExposures
+owner: rex-wh-dev@tripadvisor.com
+schema: AccountName:STRING,PartnerID:STRING,PartnerName:STRING,CampaignWebsite:STRING,CampaignStartDate:STRING,CampaignEndDate:STRING,CPARate:STRING,CPAStartDate:STRING,CPASEndDate:STRING,ExposurePlacementName:STRING,OfferType:STRING,OfferMessage:STRING,OfferExclusive:STRING,CodeOrAID:STRING,IsExposureLive:STRING,ExposurePaymentType:STRING,ToplineMessage:STRING,SectionOfTheSite:STRING,Offer1:STRING,Offer2:STRING,Offer3:STRING
+url: https://docs.google.com/spreadsheets/d/1E42A2W_owmic_KHLIgBQlZnnXlXvNvVjR0uQEvDtiZ8/edit?usp=sharing

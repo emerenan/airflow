@@ -1,0 +1,8 @@
+columns: TemplateName,BusinessDomain,NSPSupplierActionName,ExpectedDaysToAction,EmailGroup
+description: The table maps supply emails to their related actions and daystoacion
+  parameters
+destination: MapNSPSupplyEmailsToActions
+owner: rex-wh-dev@tripadvisor.com, atatlidil@tripadvisor.com
+PrimaryKeys: TemplateName
+schema: TemplateName:STRING,BusinessDomain:STRING,NSPSupplierActionName:STRING,ExpectedDaysToAction:INTEGER,EmailGroup:STRING
+url: https://docs.google.com/spreadsheets/d/1K6FKO5r6ifdZgbSMNVvs2kLGEOh1AKQC6l-O8yUDAj0/edit#gid=1357871257

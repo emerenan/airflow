@@ -1,0 +1,8 @@
+columns: GroupName,Brand,ActualCSVolumeFlag,FERCSFlag
+description: to identify true CS Case Groups in order to improve FER logics and actual
+  volumes
+destination: TACSListOfCSGroups
+owner: CSAnalytics@tripadvisor.com
+PrimaryKeys: GroupName
+schema: GroupName:STRING,Brand:STRING,ActualCSVolumeFlag:BOOLEAN,FERCSFlag:BOOLEAN
+url: https://docs.google.com/spreadsheets/d/1FKvlxWdViLiiVBdQQEOW4DyVbYgEejuChoVeiZK4TnY/edit#gid=0

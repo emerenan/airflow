@@ -1,0 +1,10 @@
+columns: Brand, LOB, TargetType, Metric, TenureFlag, Vendor, VendorSite, Target, StartDate,
+  EndDate
+description: This is to allow the VMO team to take responsibility on updating the
+  targets for the Vendor Sites. This table will be used to create the Target dashboard.
+destination: AllBrandsVendorsTargets
+schema: 'Brand: STRING, LOB: STRING, TargetType: STRING, Metric: STRING, TenureFlag:
+  STRING, Vendor: STRING, VendorSite: STRING, Target: FLOAT, StartDate: DATE, EndDate:
+  DATE'
+owner: CSAnalytics@tripadvisor.com
+url: https://docs.google.com/spreadsheets/d/1CwY_Eq2OuHU0--o7ebvyA6neeWHcMXDIxIZTGabQSz8/edit#gid=0

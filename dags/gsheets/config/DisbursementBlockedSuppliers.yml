@@ -1,0 +1,7 @@
+columns: SupplierCode
+destination: DisbursementBlockedSuppliers
+schema: SupplierCode:STRING
+owner: rex-wh-dev@tripadvisor.com
+PrimaryKeys: SupplierCode
+skipHeader: 'true'
+url: https://docs.google.com/spreadsheets/d/1PiAt6f4rDEtR2mujiu5NSouwauv8tWQ5ELk7RrZD8_g/edit#gid=0

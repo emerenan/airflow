@@ -1,0 +1,7 @@
+columns: FraudStateID,FraudState
+description: Map Owner fraud state to ID
+destination: MapOwnerFraudState
+owner: rex-wh-dev@tripadvisor.com
+PrimaryKeys: FraudStateID
+schema: FraudStateID:INTEGER,FraudState:STRING
+url: https://docs.google.com/spreadsheets/d/1aQM1XgMajGbsyDRMaUZEFVuIIbfrxAUX3_oMzSItRrU/edit#gid=0

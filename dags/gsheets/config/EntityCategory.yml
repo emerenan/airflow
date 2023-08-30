@@ -1,0 +1,7 @@
+columns: EntityCategoryId,Name
+description: This table identifies the different entity categories  that can be passed onto a tool used to solicit feedback from internal employees on whether a product is associated with a given entity
+destination: EntityCategory
+owner: aperezsegura@tripadvisor.com
+PrimaryKeys: EntityCategoryId
+schema: EntityCategoryId:INT64,Name:STRING
+url: https://docs.google.com/spreadsheets/d/1Mo7pq-cG6_XrmkvwU3lQrByOE-UYtV6wRg7v4sntHT0/edit?usp=sharing

@@ -1,0 +1,7 @@
+columns: TagId,TagIdType,VIGroupId,VIGroupName
+description: This is a mapping table, used to map group ID to Tag ID
+destination: MapVIGroupIdToTagId
+owner: dtran@tripadvisor.com
+primaryKeys: TagId
+schema: TagId:INTEGER,TagIdType:STRING,VIGroupId:INTEGER,VIGroupName:STRING
+url: https://docs.google.com/spreadsheets/d/17IwrGbMlOCVlJunrMOZvl8r9u2uchc8rfKXbjvmaM7A/edit#gid=0

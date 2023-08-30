@@ -1,0 +1,8 @@
+columns: Region,ContinentName,CountryName,CountryCode2Letter,CountryCode3Letter
+description: This table contains a list countries and their mapped continents and
+  regions
+destination: country_mapping
+owner: rex-wh-dev@tripadvisor.com , atatlidil@tripadvisor.com
+PrimaryKeys: CountryName
+schema: Region:STRING,ContinentName:STRING,CountryName:STRING,CountryCode2Letter:STRING,CountryCode3Letter:STRING
+url: https://docs.google.com/spreadsheets/d/1SJgaT0dzUzMPA9qUyKCKYImghqZ6qf1QrFsfXoYoOcE/edit#gid=1205126405

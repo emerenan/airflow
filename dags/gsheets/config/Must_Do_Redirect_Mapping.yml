@@ -1,0 +1,7 @@
+columns: SuperProductID,destinationId,title,url,Identifier,Item_Moved_To,NewUrl
+owner: ytang@tripadvisor.com
+PrimaryKeys: SuperProductID
+destination: SuperProducts_Redirects
+description: table contains redirects of recommendation pages in Must-Dos
+url: https://docs.google.com/spreadsheets/d/15lRWfnHvKEh1KI4tv0x4KvyZEHRim9a4wprKR_TCcxM/edit?usp=sharing
+skipHeader: 'true'

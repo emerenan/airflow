@@ -1,0 +1,7 @@
+columns: Skill_No,Skill_Name,Skill_Type,Skill_Brand,Skill_Language,BU
+description: The TAVRSkillMapNew originated from SQL Server. The google sheet is being
+  edited by Business Analytics Team.
+destination: TAVRSkillMapNew
+owner: CSAnalytics@tripadvisor.com, mbrinded@tripadvisor.com
+PrimaryKeys: Skill_No
+url: https://docs.google.com/spreadsheets/d/1V4hU2ZUedGoWN_Me00HKhMSF1tsyFRsV7e5wTdAwAww/edit?usp=sharing

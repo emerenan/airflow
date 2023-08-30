@@ -1,0 +1,8 @@
+columns: ID,TestName,WebsiteGrouping,ControlSliceGroup,TestSliceGroup,TestStartDate,TestEndDate,IsActive,Devices,POS,TrackingElements
+description: This table contains a list of AB test info and drives the tests shown
+  in the VR AB Test Dashboard.
+destination: ABTestInfoVR
+owner: walves@tripadvisor.com, emmartin@tripadvisor.com
+PrimaryKeys: ID
+schema: ID:INTEGER,TestName:STRING,WebsiteGrouping:STRING,ControlSliceGroup:STRING,TestSliceGroup:STRING,TestStartDate:DATE,TestEndDate:DATE,IsActive:INTEGER,Devices:STRING,POS:STRING,TrackingElements:STRING
+url: https://docs.google.com/spreadsheets/d/1GTQHN4Sb4vEGPgm7Nv-qgoIF_T9Zaxw2L0-vyhikp3A/edit?usp=sharing

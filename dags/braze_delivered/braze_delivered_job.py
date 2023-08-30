@@ -20,7 +20,7 @@ sql_dir = os.path.join(
 default_args = {
     "owner": "Analytics Engineering Team",
     "depends_on_past": False,
-    "email": ["VI_ANALYTICS_ENGINEERING@tripadvisor.com"],
+    "email": [""],
     "email_on_failure": True,
     "email_on_retry": False,
     "retries": 1,

@@ -19,7 +19,7 @@ CONFIG = f"{os.path.abspath(os.path.dirname(__file__))}/config/"
 default_args = {
     "owner": "Analytics",
     "depends_on_past": False,
-    "email": ["vi-apac-data-eng@tripadvisor.com"],
+    "email": [""],
     "email_on_failure": True,
     "email_on_retry": False,
     "retries": 0,

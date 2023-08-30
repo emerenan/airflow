@@ -15,7 +15,6 @@
     "bq_data_warehouse_connection": "viator-dev-data-warehouse-bq-admin",
     "bq_omni_connection_name": "aws-us-east-1.conn-viator-datalake-dev",
     "bq_omni_connection_location": "aws-us-east-1",
-    "gcs-lake-bucket": "viator-data-lake-dev",
     "awin_data_ingestion_settings":{
         "start_date" : "2023-03-01",
         "bq_dataset" : "viator_awin",

@@ -1,0 +1,6 @@
+columns: VIDestinationContinent,VIDestinationCountry,VIDestinationName,SupplierCode,SupplierName,RevenueShare2019And2021,AccountTierAssigment
+description: 2022 AM Team Structure - provides details on Account Management Tiers
+destination: AMTiers
+owner: jemmanuel@tripadvisor.com
+schema: VIDestinationContinent:STRING,VIDestinationCountry:STRING,VIDestinationName:STRING,SupplierCode:STRING,SupplierName:STRING,RevenueShare2019And2021:STRING,AccountTierAssigment:STRING
+url: https://docs.google.com/spreadsheets/d/1DCb0dH-A_cchqrA9_0Nyp0WDUUemve-xhyPxPGqYsJU/edit#gid=0

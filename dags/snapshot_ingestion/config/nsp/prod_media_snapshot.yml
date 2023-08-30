@@ -1,0 +1,11 @@
+bqProject: viator-data-warehouse
+bqDataset: NSPDataSnapshot
+tables:
+  gallery:
+    bqTable: prod_media_gallery
+    query: SELECT gallery_id, gallery_ref, cover_media_id, SAFE_CAST(created_at AS STRING) AS created_at, SAFE_CAST(updated_at AS STRING) AS updated_at, updated_by FROM viator-data-lake-prod.data_landing_rds_media.gallery ;
+    description: DATAENG-2200 - Load partitions 
+  gallery_media:
+    bqTable: prod_media_gallery_media
+    query: SELECT gallery_media_id, gallery_id, media_id, ordinal FROM viator-data-lake-prod.data_landing_rds_media.gallery_media ;
+    description: DATAENG-2200 - Load partitions 

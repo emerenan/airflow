@@ -19,7 +19,7 @@ CONFIG = os.path.join(BASE_DIR, 'config')
 default_args = {
     "owner": "airflow",
     "depends_on_past": False,
-    "email": ["vi-apac-data-eng@tripadvisor.com"],
+    "email": [""],
     "email_on_failure": True,
     "email_on_retry": False,
     "retries": 1,

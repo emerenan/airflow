@@ -1,7 +1,7 @@
 import logging
 import os
 from typing import Optional
-from yaml import safe_load
+from yaml import safe_load, dump
 import glob
 from typing import List
 from datetime import timedelta
@@ -15,6 +15,8 @@ from airflow.providers.google.cloud.operators.bigquery import (
     BigQueryValueCheckOperator,
     BigQueryUpsertTableOperator
 )
+from airflow.providers.google.cloud.hooks.bigquery import BigQueryHook
+#from airflow.providers.tableau.operators.tableau import TableauOperator
 from airflow.providers.google.cloud.sensors.bigquery import BigQueryTablePartitionExistenceSensor
 from airflow.sensors.base import BaseSensorOperator
 from airflow.operators.python import get_current_context
@@ -143,8 +145,8 @@ def add_views(dag, copy_yaml_path, start_task, end_task):
                     [copy_legacy_to_dwh, bck_legacy_in_dwh, bck_source] >> create_view_table
     
     start_task >> creation_job >> end_task
-        
-    
+
+
 def add_bq_extracts(dir_path, dag, start_task, end_task, ds_context_key="tomorrow_ds", on_failure_callback=None):
     """This Operator is a refactored version of on-premise's add_bq_extracts
 
@@ -218,7 +220,7 @@ def add_bq_extracts(dir_path, dag, start_task, end_task, ds_context_key="tomorro
                     arguments=arguments
                 )
                 if prev:
-                    prev >> task
+                    prev << task
                 prev = task
 
                 # AVRWH - 4158
@@ -230,7 +232,7 @@ def add_bq_extracts(dir_path, dag, start_task, end_task, ds_context_key="tomorro
 
         start_task >> yml_extraction >> end_task
 
-       
+  
 def bigquery_legacy_transformation(dag,
                                    pool, 
                                    bq_table_id, 
@@ -376,6 +378,7 @@ def bq_legacy_validations(
     last_modified_tables: Optional[list] = [], 
     expected_result_queries: Optional[dict] = {},
     partition_tables: Optional[list] = [],
+    queries_to_count: Optional[list] = [],
     poke_interval=60 * 15,  # Default 15 minutes between pokes
     timeout=60 * 60 * 2,  # Default 2 hours before giving up
     mode="reschedule",
@@ -448,16 +451,24 @@ def bq_legacy_validations(
             
             with TaskGroup(group_id='check_expected_result_queries', dag=dag) as check_results:
                 
+                count = 0
+                
                 for query, expected_result in expected_result_queries.items():
                     query = query.replace("<yesterday>", ds)
                     query = query.replace("<today>", tomorrow_ds)
                     query = query.replace("<execution_date>", execution_date)
 
                     table_name =  findall(r"`([^`]+)`", query)
-                    table_name = table_name[0].split(".")[-1]
+                    prev_table = table_name[0].split(".")[-1]
+                    
+                    if prev_table == table_name[0].split(".")[-1]:
+                        table = f"{table_name[0].split('.')[-1]}_{count}"
+                        count+=1
+                    else:
+                        table=prev_table
                     
                     check_query_value_result = BigQueryValueCheckOperator(
-                        task_id=f'check_{table_name}_query_result',
+                        task_id=f'check_{table}_query_result',
                         use_legacy_sql=False,
                         gcp_conn_id=BQ_CONN_ID,
                         sql=query,
@@ -470,6 +481,41 @@ def bq_legacy_validations(
 
 
             return check_results
+    
+    def check_queries_count():
+        
+        from re import findall
+
+        if queries_to_count and len(queries_to_count) > 0:
+            
+            ds = f"{{{{ ds }}}}"
+            tomorrow_ds = f"{{{{ tomorrow_ds }}}}"
+            # added to support ability to extract time as well as date for execution run
+            #execution_date = f"{{{{ execution_date }}}}".to_datetime_string()
+            execution_date = f"{{{{ execution_date }}}}"
+            
+            with TaskGroup(group_id='check_queries_count', dag=dag) as check_count:
+                
+                for query in queries_to_count:
+                    query = query.replace("<yesterday>", ds)
+                    query = query.replace("<today>", tomorrow_ds)
+                    query = query.replace("<execution_date>", execution_date)
+
+                    table_name =  findall(r"`([^`]+)`", query)
+                    table_name = table_name[0].split(".")[-1]
+                    
+                    check_query_count = BigQueryCheckOperator(
+                        task_id=f'check_{table_name}_query_count',
+                        gcp_conn_id=BQ_CONN_ID,
+                        sql=query,
+                        use_legacy_sql=False,
+                        retry_delay=retry_delay,
+                        retries=retries,
+                        dag=dag,
+
+                    )
+
+            return check_count
 
     def check_partition_tables():
         
@@ -516,13 +562,133 @@ def bq_legacy_validations(
             if partition_tables and len(partition_tables) > 0:
                 verifications.append(check_partition_tables())
             
+            if queries_to_count and len(queries_to_count) > 0:
+                verifications.append(check_queries_count())
+            
             verifications[-1]
     
         start >> validations >> end
     
     return tables_analysis 
 
-         
+
+def create_yaml_file(report_name, arg_count, dir_path):
+    
+    def generate_dict(partner, emails, status, arg_array, report_name, threshold, account_manager):
+        
+        DEFAULT_ACCOUNT_MANAGER = "3PAccountMgt@tripadvisor.com"
+        
+        query = """
+            SELECT RecipientEmailAddress, SubscriberKey
+            FROM `CRM.PartnerReportEmailSubscriberKeyMapping`
+            where RecipientEmailAddress in ({})
+        """
+        # Template file contains information shared across all partners for the same report
+        # Each report should have its own template file
+        folder_dir = os.path.dirname(os.path.realpath(__file__))
+        
+        template_name = f"{folder_dir}/{report_name.lower().replace(' ', '_')}_template.yml"
+        # open template file
+        try:
+            with open(template_name, "r") as f:
+                template = safe_load(f)
+        except Exception as e:
+            logging.error("Failed reading file: %s ", e)
+
+        template_id = template['templateId']
+        business_domain = template['businessDomain']
+        sheets = template['sheets']
+        args = template['args']
+
+        # fill in the template arguments with correct value
+        for arg_key, arg_value in args.items():
+            for i in range(len(arg_array)):
+                arg_str = "<arg{}>".format(i + 1)
+                args[arg_key] = arg_value.replace(arg_str, arg_array[i])
+
+        partner_name = partner.replace(",", "").replace(" ", "")
+        # Treat Loving new york special because it needs multiple reports for different puids
+        if partner.startswith("Loving New York"):
+            puid = arg_array[0]
+            filename = report_name.replace(" ", "_") + "_" + puid
+            partner_name = partner_name + puid
+        else:
+            filename = report_name.replace(" ", "_")
+
+        # Get subscriber key for recipients
+        recipients = dict()
+        recipients_list = map(str.strip, emails.split(";"))
+        query = query.format("\"" + "\",\"".join(recipients_list) + "\"")
+        bq = BigQueryHook(BQ_CONN_ID)
+        conn = bq.get_conn()
+        cursor = conn.cursor().execute(query)
+        row = cursor.fetchone()
+        while row is not None:
+            email = row[0]
+            subscriber_key = row[1]
+            recipients[email] = subscriber_key
+            row = cursor.fetchone()
+
+        # Write to dictionary
+        output = dict()
+        output["status"] = status
+        output["reportName"] = report_name
+        output["templateId"] = template_id
+        output["businessDomain"] = business_domain
+        output["recipients"] = recipients
+        upload_bucket = "gs://partner-reports-" + partner
+        upload_bucket = upload_bucket.lower().replace(".com", "").replace("google", "").replace("()", "").replace(",", "").strip().replace(" ", "-").replace(".", "-")
+        output["uploadBucket"] = upload_bucket
+        output["sheets"] = dict()
+        for key, value in sheets.items():
+            output["sheets"][key] = value
+        output["args"] = args
+        output["threshold"] = threshold
+        output["filename"] = filename
+        output["accountManager"] = account_manager or DEFAULT_ACCOUNT_MANAGER
+        return partner_name, output
+    
+    from re import sub
+    BQ_CONN_ID = Variable.get("bq_data_warehouse_connection")
+    
+    table_name = report_name.replace(" ", "") + "Partners"
+    logging.info("TABLE_NAME: " + table_name)
+    # Get most recent partition, in case the google sheet import failed for one day, the emails can still go out
+    query = f"""
+    SELECT Partner, Email, Status, PUID, Threshold, AccountManager
+    FROM `ATTRDimensions.{table_name}`
+    WHERE _PARTITIONDATE IN (SELECT MAX(_PARTITIONDATE) FROM `ATTRDimensions.{table_name}`)
+    """
+    bq = BigQueryHook(BQ_CONN_ID)
+    conn = bq.get_conn()
+    cursor = conn.cursor()
+    
+    # Loop through each row in query result and write data to a dictionary.
+    output = {}
+    row = cursor.execute(query).fetchone()
+    
+    while row is not None:
+        logging.info("row: " + str(row))
+        partner = sub('[^A-Za-z0-9]+', '', row[0])
+        emails = row[1].strip()
+        status = row[2]
+        threshold = row[4]
+        account_manager = row[5]
+        arg_array = [arg_count]
+        for i in range(arg_count):
+            arg_array[i] = row[i + 3]
+        key, value = generate_dict(partner, emails, status, arg_array, report_name, threshold, account_manager)
+        output[key] = value
+        row = cursor.execute(query).fetchone()
+        
+    out_file_name = f"{dir_path}/{report_name.lower().replace(' ', '_')}.yml"
+    
+    logging.info("Output file name: " + out_file_name)
+    
+    with open(out_file_name, 'w+') as out_file:
+        dump(output, out_file, default_flow_style=False)
+    
+    
 #--------------start------------Migration Quality Check--------------start-------------------------------------- 
 
 def quality_check_v2(legacy_table: str,

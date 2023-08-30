@@ -1,0 +1,7 @@
+schema: FraudResolution:STRING
+columns: FraudResolution
+owner: aspencer@tripadvisor.com
+PrimaryKeys: FraudResolution
+destination: FraudResolutions
+description: fraud resolutions by accertify and trust and safety
+url: https://docs.google.com/spreadsheets/d/12RELSIJ4X2X4d1lgH1DIKrXqt8Bra-bR2qk-3RvW8r0/edit?usp=sharing

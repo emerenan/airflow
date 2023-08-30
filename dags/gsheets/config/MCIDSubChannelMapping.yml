@@ -1,0 +1,9 @@
+columns: MCID,SubChannel,SubChannel2,SubChannel3,OptionalMCIDName
+description: The MCIDSubChannelMapping table is meant as a mapping for creating VR
+  sub channel mapping. This is meant to be used primarily for creating Channel Sub
+  Groups in the cube.
+destination: MCIDSubChannelMapping
+PrimaryKeys: MCID
+owner: rex-wh-dev@tripadvisor.com, atatlidil@tripadvisor.com
+schema: MCID:INTEGER,SubChannel:STRING,SubChannel2:STRING,SubChannel3:STRING,OptionalMCIDName:STRING
+url: https://docs.google.com/spreadsheets/d/1HCwHkYcPZDjLI2rbhCoChmJIrKQcwTsUaaLXzt8Ki70/edit#gid=0

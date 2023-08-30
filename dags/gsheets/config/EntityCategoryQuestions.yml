@@ -1,0 +1,7 @@
+columns: EntityCategoryId,QuestionId,Question
+description: This table identifies the different entity categoriy specific questions that can be passed onto a tool used to solicit feedback from internal employees on whether a product is associated with a given entity
+destination: EntityCategoryQuestions
+owner: aperezsegura@tripadvisor.com
+PrimaryKeys: EntityCategoryId,QuestionId
+schema: EntityCategoryId:INT64,QuestionId:INT64,Question:STRING
+url: https://docs.google.com/spreadsheets/d/13yCg82g2jInRFH0YJPcRlATHx7unWkPqyzIZUQtSY4Q/edit?usp=sharing

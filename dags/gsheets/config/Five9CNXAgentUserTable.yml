@@ -1,0 +1,4 @@
+columns: Id,Name,ReportName,Five9ID,ProductionDate,TeamLeader,EmailName,EmailUserVersion1,EmailUserVersion2
+destination: Five9CNXAgentUserTable
+owner: CSAnalytics@tripadvisor.com
+url: https://docs.google.com/spreadsheets/d/1ZwxVOMA5aBXfQfkr788gq5uTuFtZKYEB2QerWPTmLWY/edit?usp=sharing

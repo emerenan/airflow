@@ -1,0 +1,7 @@
+columns: AttractionTypeId, IsProductLed
+description: Flags attraction types that have product-led filter pages (vs. POI/supplier-led)
+destination: DimAttrTypeProductLedFlag
+owner: apuranik@tripadvisor.com
+PrimaryKeys: AttractionTypeId
+schema: AttractionTypeId:INTEGER, IsProductLed:INTEGER
+url: https://docs.google.com/spreadsheets/d/1i68XbCPyJdU0YxOW5Sk-H3N2aVGigrnxR_pSRX0-Jd0/edit?usp=sharing

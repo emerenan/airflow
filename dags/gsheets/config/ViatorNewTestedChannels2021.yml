@@ -1,0 +1,6 @@
+url: https://docs.google.com/spreadsheets/d/1V2K9PH8RpPcXXLsZztpdlHwf_wMk1y2k_tNvk70wE2w/edit#gid=2115185491
+columns: Type,TestName,LaunchDate,EndDate,TestStatus,Month,LastUpdatedDate,Cost,Impressions,Interactions,Conversion,ConversionRate,ClickThroughRate,CPI,CPC,CPA,Revenue,RoAS,ViewsVideo_Audio,CPM
+schema: Type:STRING,TestName:STRING,LaunchDate:DATE,EndDate:DATE,TestStatus:STRING,Month:DATE,LastUpdatedDate:DATE,Cost:FLOAT,Impressions:FLOAT,Interactions:FLOAT,Conversion:FLOAT,ConversionRate:FLOAT,ClickThroughRate:FLOAT,CPI:FLOAT,CPC:FLOAT,CPA:FLOAT,Revenue:FLOAT,RoAS:FLOAT,ViewsVideo_Audio:FLOAT,CPM:FLOAT
+destination: ViatorNewTestedChannels2021
+owner: ysuarez@tripadvisor.com,apacker@tripadvisor.com,ccarnevalini@tripadvisor.com
+description: Channels tested in 2021 by the Skunkworks team

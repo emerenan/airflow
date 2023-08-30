@@ -1,0 +1,4 @@
+columns: Date,English,Japanese,Chinese,Korean,Indonesian,Thai,Vietnamese,Greek,Portuguese,Russian,Turkish,French,German,Italian,Spanish,Dutch,Polish,SinglePlatform,EnglishRest,FrenchRest,ItalianRest,GermanRest,SpanishRest,PortugueseRest,TAPlus
+owner: CSAnalytics@tripadvisor.com
+destination: TACSEmailsForecast
+url: https://docs.google.com/spreadsheets/d/18zWwCvL8fj2OGRm2ljv1B8VBybhf3tCyB7ZnjAyiFiw/edit?usp=sharing

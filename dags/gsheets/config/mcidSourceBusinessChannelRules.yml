@@ -1,0 +1,10 @@
+columns: LowerMCIDSource,CrossSite,Pillar,PaidTraffic,VRChannelRollUp,VRChannel,ExpChannelRollUp,ExpChannel
+description: The MCIDSourceBusinessChannelRules table is meant as a mapping for creating
+  business channel groupings. It's also a way to standardize the channel rules across
+  products and departments. This is granular at the level of IsCrossSite and LowerMCIDSource
+  (which should join against the value in TASIteData.t_marketingcampaignattribute
+  where attributename = source). This is meant to be used primarily for creating business
+  channel groupings in the cube.
+owner: rex-wh-dev@tripadvisor.com
+destination: MCIDSourceBusinessChannelRules
+url: https://docs.google.com/spreadsheets/d/12cLJeOI_U1vAMWibI3hm_qoue-rJPzxIycGzK2ZB-AM/edit?usp=sharing

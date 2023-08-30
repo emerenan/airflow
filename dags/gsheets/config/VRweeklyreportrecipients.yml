@@ -1,0 +1,9 @@
+columns: Partner,MCID,Email
+description: This table contains the list of VR partners receiving weekly booking
+  reports, and is used a filter for SSRS. It is maintained by the BD team and Johnathan
+  Lam
+owner: vpierron@tripadvisor.com, rex-wh-dev@tripadvisor.com
+PrimaryKeys: MCID
+destination: VRweeklyreportrecipients
+schema: Partner:STRING, MCID:STRING, Email:STRING
+url: https://docs.google.com/spreadsheets/d/1JWTEZk3kUVp7nRcFH_ZNWoZiTAqtp9W37_0_1sj6Eeo/edit?usp=sharing

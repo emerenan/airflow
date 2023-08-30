@@ -1,0 +1,7 @@
+columns: ID,Servlet,Pillar
+description: Mapping table from TripMix to be joined to referrals data in taq_behaviour
+destination: tx_servlet_section_with_pillar
+owner: apuranik@tripadvisor.com
+PrimaryKeys: ID
+schema: ID:INTEGER,Servlet:STRING,Pillar:STRING
+url: https://docs.google.com/spreadsheets/d/1zZTxkOJXilNy2wiAVZ9AC2RNmpCG8Q9-GdF8pdr_i84/edit?usp=sharing

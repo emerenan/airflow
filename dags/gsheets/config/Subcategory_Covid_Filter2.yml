@@ -1,0 +1,7 @@
+columns: VICategoryId,VICategoryName,VISubCategoryId,VISubCategoryName,CovidFilter,CovidFilter2
+description: This table contains covid filter level of subcategories that will be used by FarFromTheCrowd
+destination: Subcategory_Covid_Filter2
+owner: ytang@tripadvisor.com
+PrimaryKeys: VISubCategoryId
+schema: VICategoryId:INTEGER,VICategoryName:STRING,VISubCategoryId:INTEGER,VISubCategoryName:STRING,CovidFilter:INTEGER,CovidFilter2:INTEGER
+url: https://docs.google.com/spreadsheets/d/1HEqAMFXEr-DvdR5MFS67XAien80QfyKZ9bbOMPR6WGA/edit?usp=sharing

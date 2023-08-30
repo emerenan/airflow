@@ -1,0 +1,8 @@
+columns: UserID,Name,Team,ZenDeskID,Site,DateCreated,ZDUpdaterID,FirstInContactLogin,ProductionDate,SalesforceIDOld,SalesforceID,DateAdded,SinglePlatformSFID
+description: The table is created to track user's site changes. The google sheet is
+  being edited by IGT Team
+destination: TRIPUsersIGT
+skipHeader: 'true'
+owner: atatlidil@tripadvisor.com, rex-wh-dev@tripadvisor.com
+PrimaryKeys: UserID
+url: https://docs.google.com/spreadsheets/d/1lXzjQmK1MHh7ZZKwuh3n2aSWn7-3NDV8qRryBz51QOc/edit?usp=drive_web&ouid=114418667757834129991

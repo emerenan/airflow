@@ -1,0 +1,7 @@
+description: This table holds the Covid19 affected region that we want to exclude in VI HP recommendation
+destination: RecommendationFilter
+columns: CityName,CityID
+schema: CityName:STRING,CityID:INTEGER
+owner: ytang@tripadisor.com
+primaryKeys: CityID
+url: https://docs.google.com/spreadsheets/d/1bQ4Yd3ruiBgMlpGRD47kTSXJr5dsIy96V4DYm6AQ6ps/edit?usp=sharing

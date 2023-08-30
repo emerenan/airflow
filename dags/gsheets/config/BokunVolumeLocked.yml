@@ -1,0 +1,4 @@
+columns: Date, Tier1Chats, OnshoreHelpline, Tier1Emails
+destination: BokunVolumeLocked
+owner: CSAnalytics@tripadvisor.com
+url: https://docs.google.com/spreadsheets/d/13vcLpBAGWsGgfddaNRfdyETsULb8tUWXztHxhCQXeFc/edit#gid=0

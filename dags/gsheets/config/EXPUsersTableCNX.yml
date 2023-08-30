@@ -1,0 +1,5 @@
+columns: CESID, FullName, Email, JobTitle, LOB, State, ProductionDate, Tier1Trained,
+  Tier2Trained, ChatTrained, PromotionOrAttritionDate, Remarks
+owner: CSAnalytics@tripadvisor.com
+destination: EXPUsersTableCNX
+url: https://docs.google.com/spreadsheets/d/121PJeWlt4QNyFHzeH7Id49kannMQ2dU5iI74gXaWsNo/edit#gid=0

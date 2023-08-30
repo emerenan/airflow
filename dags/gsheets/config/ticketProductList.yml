@@ -1,0 +1,5 @@
+columns: ProductCode
+destination: TicketProductList
+owner: rex-wh-dev@tripadvisor.com
+PrimaryKeys: ProductCode
+url: https://docs.google.com/spreadsheets/d/1_lezJgqgf9jJAFn6uVNNn6VZ5LyTac4jcmVlS8ARpHc/edit?usp=sharing

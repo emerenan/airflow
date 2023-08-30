@@ -1,0 +1,7 @@
+bqProject: viator-data-warehouse
+bqDataset: viator_visitor
+tables:
+  visitors:
+    bqTable: visitors
+    query: SELECT visitor_id, visitor_ref, member_ref, created_by, created_at, updated_by, updated_at FROM viator-data-lake-prod.data_landing_rds_visitor.visitors ;
+    description: DATAENG-2699 - Load partitions

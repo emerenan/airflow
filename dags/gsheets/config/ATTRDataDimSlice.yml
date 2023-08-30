@@ -1,0 +1,7 @@
+columns: ID,TTDSlice,P13NSlice,ITRSlice,ATTPSlice,TTDGroup,P13NGroup,ITRGroup,ATTPGroup
+description: Attraction DimSlice from SQL Server, Listing TTD,P13N,ITR,ATTP slice and group.
+destination: ATTRDimensions_DimSlice
+owner: rex-wh-dev@tripadvisor.com
+PrimaryKeys: ID
+schema: ID:INTEGER,TTDSlice:STRING,P13NSlice:STRING,ITRSlice:STRING,ATTPSlice:STRING,TTDGroup:STRING,P13NGroup:STRING,ITRGroup:STRING,ATTPGroup:STRING
+url: https://docs.google.com/spreadsheets/d/1A1-TEcTqEv0Zm1N41c6O-O9kZa9Y2jllHuaV8eH_iOw/edit#gid=0

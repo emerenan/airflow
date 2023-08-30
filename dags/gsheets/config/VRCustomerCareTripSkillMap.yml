@@ -1,0 +1,7 @@
+columns: skill_no,skill_name,campaign_no,campaign_name,Language,TYPE,REGION,DIRECTION,BU
+description: The TripSkillMap originated from SQL Server. The google sheet is being
+  edited by Business Analytics Team.
+owner: CSAnalytics@tripadvisor.com
+PrimaryKeys: skill_no
+destination: TripSkillMap
+url: https://docs.google.com/spreadsheets/d/1UrqmZATg6pT-bAI15hA8yrhxzCJQLykooA00PaqCb30/edit?usp=sharing

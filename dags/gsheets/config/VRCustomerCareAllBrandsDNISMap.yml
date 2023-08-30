@@ -1,0 +1,8 @@
+columns: DNIS,Brand,Language,BU,XfrTrackableOutboundCalls,XfrNonTrackableOutboundCalls
+description: This is to have a DNIS mapping table to use in our queries. Currenlty
+  DNIS included are for VR and TACS business units.
+destination: AllBrandsDNISMap
+PrimaryKeys: DNIS
+owner: CSAnalytics@tripadvisor.com
+schema: DNIS:STRING,Brand:STRING,Language:STRING,BU:STRING,XfrTrackableOutboundCalls:INT64,XfrNonTrackableOutboundCalls:INT64
+url: https://docs.google.com/spreadsheets/d/1mAz33xHtnBziOIXwJ0R90b871sZ-njihECZXdYPYGt0/edit?usp=sharing

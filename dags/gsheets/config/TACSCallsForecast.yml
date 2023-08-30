@@ -1,0 +1,4 @@
+columns: Date,English,Japanese,InstantBooking,French,German,Italian,Spanish,ApacSalesSupport,AmericasSalesSupport,EmeaSalesSupport,SinglePlatform,SPOpenTable,SPTier2,EnglishRest,FrenchRest,ItalianRest,GermanRest,SpanishRest,PortugueseRest,TAPlus
+owner: CSAnalytics@tripadvisor.com
+destination: TACSCallsForecast
+url: https://docs.google.com/spreadsheets/d/18N_KM4nim04hRby0RHBT71CsSSIpHH4Fr8zV73DPDO8/edit?usp=sharing

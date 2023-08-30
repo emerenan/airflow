@@ -1,0 +1,7 @@
+columns: RetailSiteRollUp,AccountManager
+description: AVRWH-3226
+destination: MapRetailSiteRollUpToAccountManagers
+owner: acook@tripadvisor.com
+primaryKeys: RetailSiteRollUp
+schema: RetailSiteRollUp:STRING,AccountManager:STRING
+url: https://docs.google.com/spreadsheets/d/1YXfL7LX-ZY4iJc2JFpMR9NFj6mP1Fwf7t7fxeiSqwTM/edit#gid=0

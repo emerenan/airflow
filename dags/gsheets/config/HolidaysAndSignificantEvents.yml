@@ -1,0 +1,6 @@
+columns: Date,Name,Type,Country
+description: This table contains the list of dates that need to be flagged as either
+  holiday or special event in the DimCalendar table
+destination: HolidaysAndSignificantEvents
+owner: rex-wh-dev@tripadvisor.com
+url: https://docs.google.com/spreadsheets/d/1AclVGZ8-vTqUaLyl7EZhtpYrU27S7SxaaQl5Ak8vi1Q/edit?usp=sharing

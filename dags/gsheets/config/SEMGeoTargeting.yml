@@ -1,0 +1,9 @@
+columns: criteriaId,name,canonicalName,parentId,countryCode,targetType,status
+description: This is a table that maps Google Criteria Ids to their Name,Type (of
+  Location) and current status
+destination: t_sem_geo_targeting
+owner: vmurugan@tripadvisor.com
+PrimaryKeys: criteriaId
+schema: criteriaId:INTEGER,name:STRING,canonicalName:STRING,parentId:INTEGER,countryCode:STRING,targetType:STRING,status:STRING
+skipHeader: 'false'
+url: https://docs.google.com/spreadsheets/d/13eHcGw1rn_aekSNqxGnsrRRmw6SvxruTq0ykUH8Jdqk/edit#gid=717034848

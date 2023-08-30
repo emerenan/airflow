@@ -1,0 +1,7 @@
+columns: CountryCode,Countryname,Continent
+description: The MapVICountryCode table is used in the Attractions cube to map country
+  codes to country names and continents. Not likely to change very often.
+destination: VICountryCodeMap
+owner: atatlidil@tripadvisor.com, rex-wh-dev@tripadvisor.com
+PrimaryKeys: CountryCode
+url: https://docs.google.com/spreadsheets/d/1VMRY7AHBfH6S46LEAetOfB_MAlrPzD7svKYCfJu4xgA/edit?usp=sharing

@@ -1,0 +1,7 @@
+columns: ID,ParentGeoId,ParentGeoName,ParentGeoFullName,ContinentId,ContinentName,CountryId,CountryName,SubCountryIdLevel1,SubCountryNameLevel1,SubCountryIdLevel2,SubCountryNameLevel2,SubCountryIdLevel3,SubCountryNameLevel3,SubCountryIdLevel4,SubCountryNameLevel4,RegionId,RegionName,RegionFullName,SubRegionIdLevel1,SubRegionNameLevel1,SubRegionIdLevel2,SubRegionNameLevel2,BroadParentGeo,IsN50,N50Name,IsN50_US,N50Name_US,IsN50_EU,N50Name_EU,IsGeoCommunity,OrgID
+description: Virtual Geography Locations
+owner: rex-wh-dev@tripadvisor.com
+PrimaryKeys: ID
+destination: DimVirtualGeography
+schema: ID:INTEGER,ParentGeoId:INTEGER,ParentGeoName:STRING,ParentGeoFullName:STRING,ContinentId:INTEGER,ContinentName:STRING,CountryId:INTEGER,CountryName:STRING,SubCountryIdLevel1:INTEGER,SubCountryNameLevel1:STRING,SubCountryIdLevel2:INTEGER,SubCountryNameLevel2:STRING,SubCountryIdLevel3:INTEGER,SubCountryNameLevel3:STRING,SubCountryIdLevel4:INTEGER,SubCountryNameLevel4:STRING,RegionId:INTEGER,RegionName:STRING,RegionFullName:STRING,SubRegionIdLevel1:INTEGER,SubRegionNameLevel1:STRING,SubRegionIdLevel2:INTEGER,SubRegionNameLevel2:STRING,BroadParentGeo:STRING,IsN50:STRING,N50Name:STRING,IsN50_US:STRING,N50Name_US:STRING,IsN50_EU:STRING,N50Name_EU:STRING,IsGeoCommunity:STRING,OrgID:INTEGER
+url: https://docs.google.com/spreadsheets/d/1_soOTMMRhmYIah-gvP53FA1_VAkEgd-cIfyMnVl5sxk/

@@ -1,0 +1,6 @@
+columns: Old_WNTWTT,Old_ownerMemberReason,Old_ownerMemberReason1,Old_ownerMemberReason2,Old_ownerMemberReason3,New_WNTWTT,New_ownerMemberReason,New_ownerMemberReason1,New_ownerMemberReason2,New_ownerMemberReason3
+description: This is the new case reason mapping for TACS
+destination: TACSNewCaseReasonMapping
+owner: CSAnalytics@tripadvisor.com
+skipHeader: 'TRUE'
+url: https://docs.google.com/spreadsheets/d/11hXu5kYrEIdHRMxbLavE8BDR5FAgu9aZFNY5yXXR_qc/edit#gid=0

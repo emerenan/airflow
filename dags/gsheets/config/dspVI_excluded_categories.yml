@@ -1,0 +1,6 @@
+columns: categoryId
+description: Hardcoded categories to exclude
+destination: prod_vi_excluded_categories
+owner: mmorim@tripadvisor.com
+Primarykeys: categoryId
+url: https://docs.google.com/spreadsheets/d/1SVfmvdXbw-iFOZ9CUOH1hjE06Ya-EFAOBVoq_blyx-w/edit?usp=sharing

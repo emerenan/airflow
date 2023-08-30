@@ -1,0 +1,6 @@
+columns: Date,GrossBooking,NetRevenue
+description: Planned revenue and gross booking, according to monthly reports
+destination: NetworkAffiliatesMonthlyPlan
+owner: rex-wh-dev@tripadvisor.com
+schema: Date:Date,GrossBooking:FLOAT,NetRevenue:FLOAT
+url: https://docs.google.com/spreadsheets/d/1-H-QMX7zEi3xiD0buAUBkNRZwoFSubGSAsu9gPCrSNU

@@ -1,0 +1,6 @@
+columns: AgentNameBookingItem,Agent
+description: MapVRS names to bookings for query avr-warehouse.SharedCustomerCare.vwItineraryToCallsMapping
+destination: VRSAgentMappingTable
+owner: aturnbull@tripadvisor.com
+skipHeader: 'true'
+url: https://docs.google.com/spreadsheets/d/1XHvYp8NWwaDoj1CiPtjOX72fEFzLbPgpsrepgFVe3nk/edit?usp=sharing
